@@ -1,0 +1,15 @@
+Syntax to declare multiple variables"
+
+type variable1,  string variable2,  int variable3
+
+
+*Type of the variable can be among: 
+1-Static Variable
+2-Dynamic Variable
+3-Final or const
+
+
+Conditions to write numbers:
+can’t be the keyword.
+can’t contain spaces and special characters, except the underscore(_) and the dollar($) sign.
+can’t begin with a number. 
