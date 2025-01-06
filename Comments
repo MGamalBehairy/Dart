@@ -1,0 +1,22 @@
+Signle Comment
+// This is single comment
+
+Multiple Comments
+ /*
+This 
+is 
+Multiple Comments
+*/
+
+
+3- Documentation Cmments
+/// This is 
+
+/// a documentation 
+
+/// comment
+
+NOT Important:
+Key Differences from Regular Comments
+Multiple-line comments (/* */ or //): Regular comments are used for explaining specific parts of the code or for adding notes that are not meant for formal documentation.
+Documentation comments (/// or similar): These are often parsed by tools to generate documentation in a consistent format.
