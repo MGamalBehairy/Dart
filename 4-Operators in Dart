@@ -35,3 +35,38 @@ Ex.
 dynamic value = 20;
 int number = value as int  // you created a new variable and set it to equal the "value" variable and defined it as integer
 print(number)
+
+--------------------------------------------------------------------------------
+
+*BitWise Operators:
+you can use them in Video Compression and Encryption or if you have memory limitation 
+1- And "&"
+5 & 7 = 5    // 
+/*Solution
+first converts the numbers into binaries
+5 =  0 1 0 1
+7 =  0 1 1 1 
+AND => 1 and 1 = 1
+       0 and 1 = 0
+       0 and 0 = 0
+
+OR => 1 or 0 = 1
+      0 or 0 = 0
+      1 or 1 = 1
+Left Shift  
+5 << 1 
+5 =           0000 0101
+then shift left (left ro right  "mean take from the left bit and add it to Right" )
+it will be => 0000 1010
+
+Shift Right (Note: this is different from Left Shift)
+it like doesn't really shift, but move rigt with ignoring the right bit, "but it keeps the sign"
+Just move to the right without adding anything "like ignore the bits that are moved"
+Ex.
+6 >> 1;  //               6 = 0000 0110
+after shift (or move right)=> 0000 0011
+*/
+if (userPermission & READ_PERMISSION) == READ_PERMISSION:
+  print("Can Read");
+else:
+print("Can't Read");
