@@ -1,8 +1,23 @@
 1- Arithmetic Operation
 
-~/, +,  -,  *,  /,  %,
+~/, +,  -,  *,  /,  %,   -expr => ex.  -a = -2 (if a = 2)
 Important:
 ~/  => convert the output to Integer
 
 var c = 9 / 4    // output = 2.25
 var c = 9 ~/ 4    // output = 2
+
+Using unary minus
+
+
+2- Type Test Operators
+NOTE it doesn't test Valuse but compare with data type
+is  ,  is !    // output is boolean
+Ex.
+var a = 2;
+var b = "mohamed";
+
+print (a is int)  // output = true or 1
+print(b is !string) // output = false or 0
+//print(a is 2)  // Error, can't compare with values only with data types
+
