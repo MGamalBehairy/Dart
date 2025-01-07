@@ -14,7 +14,7 @@ can’t be the keyword.
 can’t contain spaces and special characters, except the underscore(_) and the dollar($) sign.
 can’t begin with a number. 
 
-
+---------------------------------------------------------------------------------------------------
 
 * Var and Dynamic  Variables *
 
@@ -43,3 +43,62 @@ void main() {
 When to use var and dynamic?
 Use var when you know the type won't change.
 Use dynamic if you need flexibility
+
+---------------------------------------------------------------------------------------------------
+
+* Const and Final Variables *
+Both of them can't be reassigned again => The value can't be changed
+1-final:
+The Valie of final variable is determined at "runtime"  => runtime means giving value after the Execution (after the program runs)
+Ex1.
+final currentTime = DateTime.now(); // The value is assigned when the program runs.
+print(currentTime); // Output: The exact time when the program executed.
+Ex2.
+final currentUser = fetchCurrentUser();
+
+2- const:
+the value of const must be determined at "Compile-time" => Before the program runs
+Ex.
+const maxUsers = 100;
+const pi = 3.14;
+// const currentTime=DateTime.now()  => output: Error, can't be assigned runtime value to const
+
+---------------------------------------------------------------------------------------------------
+
+* Null Safety*
+  Null Safety is a feature in Dart that helps prevent null reference errors
+1- Non-nullable Variables:
+Variables Must be initialized before use, or Dart will throw an error
+Ex.
+void main() {
+  int age; // Error: Variable must be initialized.
+}
+
+2-Nullable Variables (?)
+use "?" after the type to allow the veriable to be null 
+Ex.
+void main()
+{
+string? name;
+print(name); // output: null
+}
+
+3- Null Assertion Operator (!):
+use "!" to tell dart that a nullable variable Guranteed to be NON-Null "it must have a value" 
+Ex.
+  int? age = 25;
+  print(age!); // Output: 25
+Ex2.
+  string? name;
+  // print(name!); // output: Error , you used "!" so the "name" variaable must have a value
+
+4- Null-aware Operator
+use "??" to give a degault value for null variable
+Ex.
+  int? age = null;
+
+  // Using ?? to provide a default value
+  print(age ?? 18); // Output: 18
+
+
+
