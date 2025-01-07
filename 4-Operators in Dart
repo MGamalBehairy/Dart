@@ -83,10 +83,21 @@ if (userPermission & READ_PERMISSION) == READ_PERMISSION:
 else:
 print("Can't Read");
 
-0000 0101
-1111 1010
-0000 0001
------
-1   1  1  1  1 0 1 1
-128 64 32 16 8 4 2 1
+--------------------------------------------------------------------------
+
+
+Assignment Operators:-
+
+1-   =
+2-   ??=
+
+c = a + b       // Assign c the value of adding a + b
+
+??=       // assign the value "ONLY" if it's NULL
+Ex.
+var d
+d ??= a + b       // if d is NULL then assign it the value of a+b
+
+
+
 
