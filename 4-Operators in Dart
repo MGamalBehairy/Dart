@@ -1,0 +1,8 @@
+1- Arithmetic Operation
+
+~/, +,  -,  *,  /,  %,
+Important:
+~/  => convert the output to Integer
+
+var c = 9 / 4    // output = 2.25
+var c = 9 ~/ 4    // output = 2
