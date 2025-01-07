@@ -67,6 +67,8 @@ const pi = 3.14;
 
 * Null Safety*
   Null Safety is a feature in Dart that helps prevent null reference errors
+  Use nullable types (?) only when you expect that a value might be null.
+
 1- Non-nullable Variables:
 Variables Must be initialized before use, or Dart will throw an error
 Ex.
@@ -95,10 +97,25 @@ Ex2.
 4- Null-aware Operator
 use "??" to give a degault value for null variable
 Ex.
-  int? age = null;
+  int? age;
 
-  // Using ?? to provide a default value
+  // Provide a default value if null
   print(age ?? 18); // Output: 18
 
+  // Set age to a value
+  age = 25;
+  print(age ?? 18); // Output: 25
 
+
+Real Examples of Null Safety in Action
+void main() {
+  String name = "John"; // Non-nullable
+  String? nickname; // Nullable
+
+  print(name); // Output: John
+  print(nickname); // Output: null
+
+  nickname = "Johnny";
+  print(nickname); // Output: Johnny
+}
 
