@@ -53,20 +53,40 @@ AND => 1 and 1 = 1
 OR => 1 or 0 = 1
       0 or 0 = 0
       1 or 1 = 1
-Left Shift  
+1- Left Shift  
 5 << 1 
 5 =           0000 0101
 then shift left (left ro right  "mean take from the left bit and add it to Right" )
 it will be => 0000 1010
 
-Shift Right (Note: this is different from Left Shift)
-it like doesn't really shift, but move rigt with ignoring the right bit, "but it keeps the sign"
-Just move to the right without adding anything "like ignore the bits that are moved"
+2- Shift Right (Note: this is different from Left Shift)
+it like doesn't really shift, but move rigt with ignoring the right bit,
+"but it keeps the sign"=> if the left-most bit was 0 it means the number is positive so after shifting we will keep the leftmost bit "zero"
+and if the leftmost bit is "1" then it means the nmber is Negative, and after shifting we will keep the leftmost bit "1"
+Summary=> Just move to the right with ignoring the rightmost bit and keep the leftmost bit as it
 Ex.
 6 >> 1;  //               6 = 0000 0110
 after shift (or move right)=> 0000 0011
+
+3- Unsigned Right Shift ">>>"
+it's like Right Shift but always fill the leftmost bits with 0, "Ignore the sign", always Positive
+Ex.
+-5 >>> 1 = 2147483645
+"مش فاهمها"
+
+
 */
+ReaL Example of using Bitwise
+in unix (in permission for example)
 if (userPermission & READ_PERMISSION) == READ_PERMISSION:
   print("Can Read");
 else:
 print("Can't Read");
+
+0000 0101
+1111 1010
+0000 0001
+-----
+1   1  1  1  1 0 1 1
+128 64 32 16 8 4 2 1
+
