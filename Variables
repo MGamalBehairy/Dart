@@ -13,3 +13,30 @@ Conditions to write numbers:
 can’t be the keyword.
 can’t contain spaces and special characters, except the underscore(_) and the dollar($) sign.
 can’t begin with a number. 
+
+
+
+* Var and Dynamic  Variables *
+
+The DIfference between Var and Dynamic 
+1-var:
+After the type is assigned, it cannot change.
+When you declare a variable using var, its type is inferred once when you assign it a value.
+void main() {
+  var name = "John"; // Dart infers that 'name' is a String.
+  print(name); // Output: John
+
+  // name = 42; // This will cause an error because 'name' is already a String.
+}
+
+2-dynamic:
+When you declare a variable using dynamic, its type can change at runtime.
+It allows you to assign different types of values to the same variable.
+void main() {
+  dynamic value = "Hello"; // Initially, 'value' is a String.
+  print(value); // Output: Hello
+
+  value = 42; // Now, 'value' is an integer.
+  print(value); // Output: 42
+}
+
