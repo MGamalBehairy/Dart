@@ -21,3 +21,17 @@ print (a is int)  // output = true or 1
 print(b is !string) // output = false or 0
 //print(a is 2)  // Error, can't compare with values only with data types
 
+--------------------------------------------------------------------------------
+
+"as" operator in Dart:
+- it onverts(typecast) one type into another
+- it checks the type at "runtime" and throws an error if the conversation is  invalid
+
+why use "as" ?
+sometimes u declare a variable with dynamic or Object, so dart is not sure what type of this variable
+so you tell dart I'm sure about the type of this variable and make it (String) for example
+
+Ex.
+dynamic value = 20;
+int number = value as int  // you created a new variable and set it to equal the "value" variable and defined it as integer
+print(number)
