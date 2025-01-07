@@ -40,3 +40,6 @@ void main() {
   print(value); // Output: 42
 }
 
+When to use var and dynamic?
+Use var when you know the type won't change.
+Use dynamic if you need flexibility
