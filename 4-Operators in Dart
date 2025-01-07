@@ -145,8 +145,12 @@ Ex1.
 
 Ex2.
       var d = n ?? "n has Null value"; // Note: the Expression 1 here is "n"
-      print(d);
+      print(d);       // it will print "n" which is Expression 1
 
 Ex3.
        var f = 5 ?? "f is Null";
-       print(f);
+       print(f);       // it will print "5" which is "Expression 1"
+Ex4.
+       var? name;
+       var g = name ?? "Name is Empty";
+       print(g);       // output:  "Name is Empty" which is Expression 2 cuz name(Expression1) was null
