@@ -154,3 +154,49 @@ Ex4.
        var? name;
        var g = name ?? "Name is Empty";
        print(g);       // output:  "Name is Empty" which is Expression 2 cuz name(Expression1) was null
+
+--------------------------------------------------------------------------
+
+[8]. Cascade Notation Operators:
+This Class of Operators allows you to perorm a sequence of operation on the same element.   ".." Cascading Method       ,        "..?" Null Shorting Cascade
+1- ".." " Cascading Method => it allows you to perform multiple methods on the same element.
+Ex.
+// Dart Program to Demonstrate
+// Use of Cascading Operator
+
+// Class 
+class GFG {
+    var? a;
+    var? b;
+
+    void set(x, y)
+    {
+        this.a = x;
+        this.b = y;
+    }
+
+    void add()
+    {
+        var z = this.a + this.b;
+        print(z);
+    }
+}
+
+void main()
+{
+    // Creating objects of class GFG
+    GFG geek1 = new GFG();
+    GFG geek2 = new GFG();
+
+    // Without using Cascade Notation
+    geek1.set(1, 2);
+    geek1.add();
+
+    // Using Cascade Notation
+    geek2..set(3, 4)              // Notice here we used the Cascading Method ".."
+         ..add();
+}
+
+2- ..?       => its used when we are sure that the None of cascading Operation used on NULL Elements
+Ex.
+// Add Example "there was no Examples here"
