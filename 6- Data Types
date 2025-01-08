@@ -1,0 +1,154 @@
+Data Types like normal:
+[1]. Numbers
+int  ,  String  ,  double  ,  float      ,      num
+
+num => type is an inherited data type of the int and double types
+
+  num test = 15.959595;
+  print(test);  // output: 15.959595
+
+
+[2]. Strings
+String  => its used to represent a sequence of number. It's a sequence of UTF-16 code units
+           strng values can be typed in "Double" or 'single' quotes
+Ex.
+  String str = "Mohamed";
+  String str2= 'Gamal';
+  var str3 = "Ibrahim";
+
+
+[3]. Boolean
+- It represents Boolean Values  => True or False
+
+Ex.
+  String str1 = "Hello";
+  String str2 = "code";
+  bool test = (str1==str2);
+  print(test);
+
+
+[4]. List
+- the List is similar to Array in other programming languages. A list is used to represent a collections of Objects. 
+- It's an ordered group of objects
+- It holds multiple values in the same type
+- Lists are indexed, you can access elements using their position(starting from 0)
+
+*Declaration of List
+1) Variable Size list
+Ex.
+  List<int> var_name1 = [];
+  List<String> var_name2;
+
+2) Fixed Size List
+Fixed Size doesn't mean we can't change the size of the list, but we have predefined that the list has this much of elements while declaring
+Ex.
+List<int> var_name2 = List<int> generate.(size, (index) => index*2);
+// generate.()  create List with specific Size
+
+// (size, (index) => index*2)
+// size: specifies how many elements the list will have  , for example , size = 5 , then the List will have 5 elements
+// (index) => * 2  : This functions determine the value of each element in the list based on  its index
+
+Ex.
+List<int> test = List<int>.generate(size, (index) => index*2 );
+// lets assume the size = 5
+// for each index [0, 1, 2, 3, 4]
+// index * 2 =  0 * 2 = 0
+                1 * 2 = 2
+                2 * 2 = 4
+                3 * 2 = 6
+                4 * 2 = 8
+// so the elements will be [0, 2, 4, 6, 8]
+
+Ex2.
+List<int> = test2 = List<int>.generate(5, (index) => index * index);
+
+Ex3.
+List<String> greetings = List<String>.generate(4, (index) => "Hello $index");
+print(greetings);
+// output:
+// [Hello 0, Hello 1, Hello 2, Hello3]
+
+Note: in the previous Example You can't type it like this
+List<String> greetings = List<String>.generate(4, (index) => "Hello " + index);  // Because "+" in Dart => Cancotenate only with 2 strings, and in this case "index" is integer so you need to convert it to string
+                                                                                // index.toString()
+                                                                                // and if u use like this "Hello $index" this will include the value of index directly into string (convert Automatically the Integer to String)
+
+----------------------------------------------------------------------------------------------
+
+[5]. Map
+- Its a Key and Value Pair
+- Its Dynamic Collection
+- Each Key is Unique
+- You can Modify the Values and Keys
+
+*Syntax of Map:
+Map<KeyType, ValueType> mapName = {};
+
+*Declaration of Map
+1)  Empty Map
+Map? map_name;
+
+Map<key_datatype, value_datatype>? map_name;
+
+2) Dclare Map with Elements inside it
+Map<String, String>? = {k}
+
+3) Using Constructor (  if you want to start with Empty Map, u use Map()    ):
+Map<String, String> mapCountry = Map();
+countryMap["USA"] = "Washington, D.C.";
+countryMap["EGYPT"] = "Cairo";
+countryMap["Germany"] = "Hambourg";
+print(countryMap);
+// Add new Key
+countryMap["France"] = "Paris";
+// Modify Existing key
+countryMap["EGYPT"] = "GIZA";
+
+// Iterate over the keys
+for (String key in countryMap.keys)
+{
+  print(key);
+}
+// Iterate over the Values
+for(value in countryMap.values)
+{
+  print(value);
+}
+//// Iterate over the Keys and Values (Entries)
+for (var entry in countryMap.entries)
+{
+  print("$entry.key: $entry.value");
+}
+* Checking Map Properties
+// Check if key Exist
+print (  countryMap.containKey("EGYPT")  );  // true or false
+// check if value Exist
+print(  countryMap.containValue("Cairo")  );  // true or false
+// Clear the Map
+countryMap.clear()
+// Check if map is Empty
+print(  countryMap.isEmptry  );  // true or False
+
+// Get the Number of Elements      Note: We Don't use parentheses after the funcion fo exampel   .isEmpty  ,  .length  ,  .containKey
+print(  countryMap.length  );
+
+// Get the Keys as a List
+print(  countryMap.keys.toList()  );  Note: here we used Parentheses after .toList()
+
+// Add Multiple Entries
+countryMap.addAll({"Palestine":"Kuds" , "Lebanon":"Birut",  "Saudi Arabia": "Riad"});
+
+// Using String Keys and "List" Values
+Map<String, List<int>> scores = {                  // Important
+  "Alice" : [1, 2, 3, 20],
+  "BoB  " : [43, 48, 795],
+};
+print(scores["Alice"]);
+
+// Dynamic Map()
+Map<dynamic, dynamic> dynamicMap = {
+true: "yes",
+"First Name": "Ahmed",
+"age" : 24,
+};
