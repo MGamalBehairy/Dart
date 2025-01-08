@@ -1,0 +1,31 @@
+- Dart String is a sequence of UTF-16 code units (the same as Python)
+- You can use either 'single' quote or "double" quotes
+
+Note:
+- You can put a value of expression inside String usign "${expression}"    // This will convert whatever the type expression is into String (for example if the exression was integer or boolean, it will converted to String)
+- also you can use "+" operator to concatenate with antoher Variable (string, integer, double...)
+
+
+Very Important
+ Raw String    
+ *Syntax
+ String rawString = r"Hello\nWorld";  // Note: we added "r" before the string, the "r" is for => raw string
+ *it used for:
+ - Leteral Representation => used with Especial Characters (if you type   var rawString = r"Hello\nguys"  => the output will be "Hello\nguys")
+ - Convince: Avoid the need to double back-Slashes (windows path)
+ Ex1.
+ void main() {
+  String normalStringFilePath = "C:\\Users\\Documents\\Project";  // Note: we needed here to add double Slash 
+  print(normalStringFilePath);
+  // Output: C:\Users\Documents\Project
+
+  String rawStringFilePath = r"C:\Users\Documents\Project";    // We just add one slash, cuz the Raw String represent the Strings as it(even the special Characters like \n, \t, \  ...) 
+  print(rawStringFilePath);
+  // Output: C:\Users\Documents\Project
+
+*When to Use Raw Strings
+When you want to include file paths or URLs without escaping backslashes or other characters.
+When working with regular expressions or string literals that have many special characters.
+When you need the literal representation of a string for logging, debugging, or other purposes.
+  
+}
