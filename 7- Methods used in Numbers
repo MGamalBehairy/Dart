@@ -5,3 +5,8 @@ round(): Use when you need to find the nearest integer.      //  5.5  will be 6 
 toInt(): Use when you want to convert a number to an integer but don’t care about rounding (similar to truncate()). same as truncate()
 toString(): convert the integer or float number into text  // 5 => "5"    ,   54.454 => "54.454"
 toDouble(): convert the integer number into Double.  // 5 => 5.0
+
+
+Imp. 
+you can use "num" data type , if you are Not sure if the varaible will be integer or double (depends on user input)
+The num type is an inherited data type of the int and double types.
