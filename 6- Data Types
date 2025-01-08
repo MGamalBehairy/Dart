@@ -127,6 +127,9 @@ print (  countryMap.containKey("EGYPT")  );  // true or false
 print(  countryMap.containValue("Cairo")  );  // true or false
 // Clear the Map
 countryMap.clear()
+
+// Remove key
+map.remove("key");
 // Check if map is Empty
 print(  countryMap.isEmptry  );  // true or False
 
@@ -152,3 +155,22 @@ true: "yes",
 "First Name": "Ahmed",
 "age" : 24,
 };
+
+
+// Real-Life use case of Map
+Map<String, String> user1 = {
+"username": "Alice",
+"age": "23",
+"email": "alice@test.com",
+"phone": "123-456-789",
+};
+print(user[email]);
+
+// Ex2.  Grouping Scores by Subject
+Map<String, List<int>> subjectScore = {
+  "Math": [90, 80, 57, 60],
+  "Science": [74, 68, 20],
+  "Arabic": [90, 80, 75],
+};
+print(  subjectScore["Arabic"]);
+
