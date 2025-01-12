@@ -27,7 +27,31 @@ var countryMap = {
   print(dynamicMap); // Output: {1: One, 2: Two}
 }
 
+/////    NOTE  ////
+ if You give more one value to only one key  => it will just take the first value and ignore the other Values
 
+Ex.
+void main() {  
+  // Creating Map using Constructors
+  var gfg = new Map();
+   
+  // Inserting values into Map
+  gfg [0] = 'Geeks';
+  gfg [0] = 'for';
+  gfg [0] = 'Geeks';
+   
+  // Printing Its content
+  print(gfg);
+   
+  // Printing Specific Content
+  // Key is defined
+  print(gfg[0]); 
+}
+Output:  
+
+{0: Geeks}
+Geeks
+You have noticed that the other two values were simply ignored.
 
 //// Inserting New value into Map ////
 
