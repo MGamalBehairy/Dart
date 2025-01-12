@@ -1,0 +1,33 @@
+Sets is a special type of Lists, where all inputs or items must be unique.
+- it dpesn't contain any repeated inputs
+- it doesn't ordered like Lists 
+Ex.
+Set <variable_type> variable_name = {};
+OR
+var Variable_name = <variable_type> {}    // don't like it, 
+
+
+
+import 'dart:io';
+
+void main() {
+  Set<String> name = {'Ahmed', 'Mohamed'};
+  print(name);
+}
+
+
+Important
+// Note the Difference Between Lists and Sets in the next Ex. "When Add a repeated values"
+
+void main() {
+  // Declare A List
+  var List_name = ['Ahmed', 'Mohamed', "Ahmed", "Mohamed", "Ahmed"];
+  
+  // Declare Set
+  var Set_name = {'Ahmed', 'Mohamed', "Ahmed", "Mohamed", "Ahmed"};
+
+  print(" Hello in List $List_name");  // output: ['Ahmed', 'Mohamed', "Ahmed", "Mohamed", "Ahmed"]
+  print("Hello in Set $Set_name");     // output: {"Ahmed", "Mohamed"}
+
+
+
