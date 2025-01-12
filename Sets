@@ -30,4 +30,25 @@ void main() {
   print("Hello in Set $Set_name");     // output: {"Ahmed", "Mohamed"}
 
 
+// Some Important Functions Used with Sets
+
+.add()  // To add element
+Set_name.add("Ali");
+
+.addAll()  // To add many Inputs not just 1
+ Set_name.addAll("Khaled", "Anas", "Metwally");
+
+.remove()  // to remove input from the Set
+Set_nme.remove("Mohamed");
+
+.clear()  // To clear the Set
+
+.length  // To get the length of the set
+Set_name.length ;   // output:  6
+
+.elementAt(index)  //  to get the value at index[num]
+Set_name.elementAt(2);  //output:  "Ahmed"
+
+.contains()  // to check if the value is contained in the set or not, it returns true or false
+Set_name.contains("Esraa");  // false
 
