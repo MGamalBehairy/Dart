@@ -1,0 +1,44 @@
+Map is like Dictionary in other languages like python
+- It's a collection of key-value pairs
+
+* Declaring Map in Dart
+1- Literal 
+2- Constructor
+
+* Literal (most common)
+Ex.
+
+var countryMap = {
+"USA": "Washington, D.C.",
+"Egypt": "Cairo", 
+"Emirates": "Dubai",
+"Saudi Arabia" : "Riadh"
+};
+
+* Constructor    => First Add Emtpy Map, then add keys and values on it
+  - it's used when you need to add Dynamic add key-value pairs like (reading INPUT  from users or files )
+  Ex.
+  void main() {
+  var dynamicMap = Map<String, String>();
+  
+  // Adding values dynamically
+  dynamicMap["1"] = "One";
+  dynamicMap["2"] = "Two";
+  print(dynamicMap); // Output: {1: One, 2: Two}
+}
+
+
+
+//// Inserting New value into Map ////
+
+void main()
+{
+   var numbers_Map = {
+   "1": 1  ,  "2": 2  , "3": 3
+   };
+   print (numbers_Map);
+   // Add new Value
+   numbers_Map["100"] = 100;
+   numbers_Map["20"] = "Twenty";  // it will go throw an error, because you didn't declare the map will contain String, so it thought it will be <String, int>, so you need to specify it as <dynamic, dynamic>  =>     var numbers_Map = <dynamic, dynamic>{"1": 1, "2": 2, "3": 3};
+  print(numbers_Map);
+}
