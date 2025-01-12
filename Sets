@@ -46,9 +46,123 @@ Set_nme.remove("Mohamed");
 .length  // To get the length of the set
 Set_name.length ;   // output:  6
 
-.elementAt(index)  //  to get the value at index[num]
-Set_name.elementAt(2);  //output:  "Ahmed"
 
 .contains()  // to check if the value is contained in the set or not, it returns true or false
 Set_name.contains("Esraa");  // false
 
+
+.elementAt(index)  //  to get the value at index[num]
+Set_name.elementAt(2);  //output:  "Ahmed"
+
+
+.forEach((element) {...})
+Ex.
+void main() {
+  // Declare a set with values
+  var gfg = <String>{'Hello', 'Geek1', 'Geek2'};
+
+  print("Using forEach in set:");
+  
+  // Iterate through each element in the set
+  gfg.forEach((element) {
+    // Check if the element is equal to "Geek1"
+    if (element == "Geek1") {
+      print("Found");
+    } else {
+      print("Not Found");
+    }
+  });
+}
+
+Ex2.
+void main() {
+  var items = {'Apple', 'Banana', 'Cherry'};
+
+  items.forEach((fruit) {
+    print("I like $fruit");
+  });
+}
+
+Note: The "element" is just a temporary variable used to represent each item in the set while iteratin. 
+      It is not declared explicitly because it is automatically provided by the forEach() function.
+      you can provide it any name. but "element" was just example.
+
+// Convert Set to List
+List <dynamic> List_name = Set_variable_name.toList();
+
+// Convert Set to Map
+  Ex,
+// Converting Set to Map in Dart
+void main() 
+{
+// Declaring set 1 with value
+  var gfg = <String>{"GeeksForGeeks", "Geek1", "Geek2", "Geek3"};
+
+  var geeksforgeeks = gfg.map((value) {
+    return 'mapped $value';
+  });
+  print("Values in the map:");
+  print(geeksforgeeks);
+}
+
+
+
+/////    Operations in Set  /////
+
+
+// Operations used in Sets
+
+void main()
+{
+// Declaring set 1 with value
+var gfg1 = <String>{"GeeksForGeeks","Geek1","Geek2","Geek3"};
+
+// Printing values in set
+print("Values in set 1 are:");
+print(gfg1);
+
+print("");
+
+// Declaring set 2 with value
+var gfg2 = <String>{"GeeksForGeeks","Geek3","Geek4","Geek5"};
+
+// Printing values in set
+print("Values in set 2 are:");
+print(gfg2);
+
+print("");
+
+
+// Finding Union
+print("Union of two sets is ${gfg1.union(gfg2)} \n");
+
+// Finding Intersection
+print("Intersection of two sets is ${gfg1.intersection(gfg2)} \n");
+
+// Finding Difference
+print("Difference of two sets is ${gfg2.difference(gfg1)} \n");
+	
+}
+
+// Finding Union
+// Union   =>  its like print the elements again but if any dulicated, print ot only once
+Ex.
+print("Union of two sets is ${gfg1.union(gfg2)} \n");
+
+Union combines all unique elements from both sets.
+gfg1.union(gfg2) results in: {GeeksForGeeks, Geek1, Geek2, Geek3, Geek4, Geek5}.
+
+// Step 4: Finding Intersection
+
+print("Intersection of two sets is ${gfg1.intersection(gfg2)} \n");
+Intersection finds elements common to both sets.
+gfg1.intersection(gfg2) results in: {GeeksForGeeks, Geek3}.
+
+//Step 5: Finding Difference
+
+print("Difference of two sets is ${gfg2.difference(gfg1)} \n");
+Difference finds elements in gfg2 that are not in gfg1.
+Ex.
+gfg2.difference(gfg1) results in: {Geek4, Geek5}.
+
+// output:  Difference of two sets is {Geek4, Geek5}
