@@ -19,6 +19,7 @@ removeLast()	Removes the last element (LIFO behavior).
 isEmpty	=> Checks if the queue is empty.
 isNotEmpty	=> Checks if the queue has at least one element.
 length  => get the number of elements in the queue
+queue_name.forEach(f(element))  =>  Returns all the element present in the queue.
 
 Examples 
 // FIFO Behavior
