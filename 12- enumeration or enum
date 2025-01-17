@@ -56,7 +56,7 @@ void main()
 enum TrafficLight { Red, Yellow, Green }
 
 void main() {
-  var light = TrafficLight.Red;
+  var light = TrafficLight.Red;        // Note: we set the value of Light to "Red"    
 
   switch (light) {
     case TrafficLight.Red:
@@ -70,3 +70,4 @@ void main() {
       break;
   }
 }
+// Output:  Stop!        // cuz light is Red
