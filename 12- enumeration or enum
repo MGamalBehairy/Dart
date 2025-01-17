@@ -79,9 +79,29 @@ enum paymentStatus {Pendin, Completed, Failed}
 
 class Order 
 {
-    paymentStatus status;
+    String orderId;
+    double amount;
 
-    Order(this.status);
+    paymentStatus status;    // status can hold only value from paymentStatus Enumeration 
 
-    
+    Order(this.orderId, this.amount, this.status);    // this to 
+    void displayStatus(){
+        print("Order ID: $orderId");
+        print("Amount: $amount");
+        print("status: $status");
+    }
+}
+void main()
+{
+    // create first order
+    Order order1 = Order("Ord123", 200.0, paymentStatus.pending);
+
+    // Display the order details
+    order1.displayStatus();
+
+    // change the payment status to complete
+    order1.status = paymentStatus.completed;
+
+    print("\nAfter Payment: ");
+    order1.displayStatus();
 }
