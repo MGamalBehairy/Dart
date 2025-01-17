@@ -71,3 +71,17 @@ void main() {
   }
 }
 // Output:  Stop!        // cuz light is Red
+
+---------------------------------
+Ex3.
+// Enumeration with class
+enum paymentStatus {Pendin, Completed, Failed}
+
+class Order 
+{
+    paymentStatus status;
+
+    Order(this.status);
+
+    
+}
