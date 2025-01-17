@@ -1,1 +1,74 @@
+Queue is a Collection that allows the Items to be added and removed in a specific order.
+
+* Types
+1- FIFO  => ( First-In-First-Out  ): Items are Processed in the "Same" order they were added ( Like a Line of People )
+2- LIFO  => ( Last-in-First-Out )  : Items are processed in "Reverse" order of how they were added ( Like a stack of Plates )
+
+* to Use a Queue you need import "collection" Package
+import 'dart:collection';
+
+* Declare a Queue
+1- Using Constructor
+Queue<int> queue1 =   Queue<int>();    // Queue For Integers
+
+* Methods in Queue
+add(element)	=> Add one element
+addAll(elements)	=> add multiple eements
+removeFirst()	Removes the first element (FIFO behavior).
+removeLast()	Removes the last element (LIFO behavior).
+isEmpty	=> Checks if the queue is empty.
+isNotEmpty	=> Checks if the queue has at least one element.
+length  => get the number of elements in the queue
+
+Examples 
+// FIFO Behavior
+import 'dart:collection';
+
+void main() {
+  // Creating a Queue
+  Queue<int> queue = Queue<int>();
+
+  // Adding elements
+  queue.add(10);
+  queue.add(20);
+  queue.add(30);
+  print("Queue after adding elements: $queue");
+
+  // Removing the first element (FIFO)
+  queue.removeFirst();                                // This make the queue FIFO Behavior, cuz we remove the "First" element
+  print("Queue after removing first element: $queue");
+
+  // Checking if queue is empty
+  print("Is the queue empty? ${queue.isEmpty}");
+}
+
+------------------------------------------
+Ex2.
+// LIFO Behavior
+import 'dart:collection';
+
+void main() {
+  // Creating a Queue
+  Queue<String> lifoQueue = Queue<String>();
+
+  // Adding elements
+  lifoQueue.add("Plate1");
+  lifoQueue.add("Plate2");
+  lifoQueue.add("Plate3");
+  print("Queue (LIFO) after adding elements: $lifoQueue");
+
+  // Removing the last element (LIFO)
+  lifoQueue.removeLast();                                // This make the queue LIFO Behavior, cuz we remove the "Last" element
+  print("Queue after removing last element: $lifoQueue");
+}
+
+
+Conclusion:
+1- FIFO (First-In-First-Out) is the default behavior of the Queue class.
+2- Use removeFirst() for FIFO behavior and removeLast() for LIFO behavior.
+3- Queue is not as commonly used as List or Set but is very useful for scenarios like:
+    - Task scheduling
+    - Buffer management
+    - Processing events in order
+
 
