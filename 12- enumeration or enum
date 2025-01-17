@@ -1,0 +1,31 @@
+enumeration is a special data type that allows you to define a collection of constant values.
+
+- Its used when you have a fixed set of relatd values like:
+    - Traffic Light ("red", "yellow", "green")
+    - Days ("saterday", "sunday", "monday"....)
+    - Directions ("North", "South", "East", "West")
+
+- enums are Immutable (Not Changable)
+- enums defined before the main function
+- the values doesn't come with quotations " ", even if the value is string
+- provide the values after the enum name directly 
+- Also it doesn't take semi-colon ;
+like this:
+
+enum Days {Saturday, Sunday, Monday, Tuesday, Wednesday}
+void main()
+{
+}
+
+
+// if you want to access the value
+Ex.
+enum Days {Saturday, Sunday, Monday, Tuesday, Wednesday, Friday}
+void main()
+{
+   Days today = Days.Friday ;
+   print("Today is $today");  // output: Today is Days.Friday
+   // if you want to just print the value use .name
+   print("Today is: $today.name)  // output: Today is Friday
+}
+
