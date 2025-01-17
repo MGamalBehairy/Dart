@@ -29,3 +29,44 @@ void main()
    print("Today is: $today.name)  // output: Today is Friday
 }
 
+Ex2.
+
+enum trafficLight {Red, Yellow, Green}
+void main()
+{
+    trafficLight light = trafficLight.Red
+
+    switch (light) 
+        {
+            case trafficLight.Red:
+                print("Stop!");
+                break;
+        
+            case trafficLight.Yellow:
+                print("Get Ready!");
+                break;
+
+            case trafficLight.Green:
+                print("GO!");
+                break;
+        }
+}
+
+
+enum TrafficLight { Red, Yellow, Green }
+
+void main() {
+  var light = TrafficLight.Red;
+
+  switch (light) {
+    case TrafficLight.Red:
+      print("Stop!");
+      break;
+    case TrafficLight.Yellow:
+      print("Get Ready!");
+      break;
+    case TrafficLight.Green:
+      print("Go!");
+      break;
+  }
+}
