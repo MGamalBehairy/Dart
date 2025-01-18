@@ -1,0 +1,7 @@
+The loops are 
+for loop    ,    for ... in loop    ,     for each loop    ,    while loop      ,       do-while loop
+
+
+ for(initialization; condition; text expression){
+    // Body of the loop
+}  
