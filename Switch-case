@@ -1,0 +1,40 @@
+switch-case is a simplified version of "if-else" 
+* Syntax
+
+switch (expression) {
+  case value1:{
+    // Body of Value1;
+  } break;
+
+  case value2: {
+    // Body of value2;
+  } break;
+
+  default: {
+    // Body of default case;
+  } break;
+}
+
+// The "default-case"  is the case will be executed if none of the above cases matches the condition.
+
+Ex. "Nested Switch"
+void main() 
+{ 
+	int gfg1 = 1; 
+	String gfg2 = "Geek"; 
+	switch (gfg1) { 
+	case 1: { 
+		switch (gfg2) { 
+		case 'Geek': { 
+			print("Welcome to GeeksforGeeks"); 
+		} 
+		} 
+	} break; 
+	case 2: { 
+		print("GeeksforGeeks number 2"); 
+	} break; 
+	default: { 
+		print("This is default case"); 
+	} break; 
+	} 
+} 
