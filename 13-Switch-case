@@ -38,3 +38,6 @@ void main()
 	} break; 
 	} 
 } 
+
+Note:   The values should not be repeated
+	- The case statement should be only "Constant".  It should not be variable or expression. 
