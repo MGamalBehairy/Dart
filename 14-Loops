@@ -1,7 +1,81 @@
 The loops are 
 for loop    ,    for ... in loop    ,     for each loop    ,    while loop      ,       do-while loop
 
-
+1-////   for   ////
  for(initialization; condition; text expression){
     // Body of the loop
 }  
+Ex. 
+for(int i = 0;  i<10 ;  i++)
+{
+ print(i);
+}
+
+2- ////  for ... in ////
+for( var in expression)
+{
+ body of loop
+}
+Ex.
+void main()
+{
+ var numbers = [1, 2, 3, 4, 5];
+ for (i in numbers)
+ {
+  print(i);
+ }
+}
+
+3-  ////   for each ////
+for each => itetrate over all elements in some container and passes the elements to some specific function
+
+* Syntax *
+collection.foreach( void f(value) )
+// f(value) =>> it is used to make a call to the "f"  function for each element in the collection
+
+*Important*
+Ex.
+void main()
+{
+ var numbers = [1, 2, 3, 4, 5];
+ numbers.forEach ( (var num) => print (num) );
+}
+
+4- ////  while  ////
+The body of the loop will run until and unless the condition is true
+* syntax
+while(condition)
+{
+ text expression;
+ // Body of loop
+}
+
+Ex.
+void main()
+{
+ int i = 1;
+ while (i < 5)
+ {
+  print(i);
+  i++;
+ }
+}
+
+
+5-  ////  do..while  ///
+it must be executed at least one time, then the condition is tested
+*Syntax*
+do {
+ // body of loop
+ test expression;
+}while(condition);
+
+Ex.
+int i = 4;
+void main()
+{
+ do {
+  print("Hello");
+  i--;
+} while(i > 1);
+}
