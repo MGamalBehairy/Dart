@@ -1,0 +1,53 @@
+///    Anonymous Function  //// also its called "Lambda or Closure"
+
+- Its like normal function but "without name"
+- Its used when u want quick, one-time function , especially for passing as an argument to higher-order functions (like forEach, map)
+
+* Syntax *
+(parameter){
+  // function body
+};
+
+Ex.
+void main(){
+  // anonymous function assigned to variable
+  var greet = (String name){
+    return "Hello $name";
+  }
+  // Calling the Anonymous Function
+  print(greet("Mohamed"));
+}
+
+///    Real-case Scenario  ///
+void  main()
+{
+  List<String> names = ["Mohamed", "Ahmed", "Ali"];
+
+  // using an Anonymous Function in forEach
+  names.forEach((signleName){
+    print("Hello $singleName!");
+    });
+}
+
+Ex2.    // double the numbers using anonymous function in Map
+void main()
+{
+  List<int>  numbers = [1, 2, 3, 4];
+
+  // using Anonymous function in "Map"
+  List<int> doubled = numbers.ma((number){
+    return number * 2;
+  }).toList();
+  print(doubled);
+}
+
+Ex3. // Sort A List of String by their Length
+void main()
+{
+  List<String> fruits = ["Banana", "Apple", "Kiwi"];
+
+  // usign anonymous function to sort by length
+  fruits.sort((a ,b) => a.length.compareTo(b.length));
+
+  print(fruits);
+}
