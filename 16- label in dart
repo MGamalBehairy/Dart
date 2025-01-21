@@ -1,0 +1,53 @@
+      ///    labels    ////
+
+
+- Its used to mark specific loop or block of code so you can easily reference them and control them using "break" and "continue"
+- This especially useful when you have nested loops and want to break out or continue loop
+- Think os it like "Tags"  you assign to loop to manage it easily
+
+* Syntax *
+labelName: for( // condition )
+{
+break;
+continue;
+}
+
+
+Ex.
+
+void main()
+{
+  outerLoop:for (int i = 0; i < 5; i ++){
+    for( int j = 0; j < 3; j++)
+    {
+      if(j == 2)
+      {
+          break outerLoop;    // Exist the outLoop
+      }
+      print("i: $i,  j: $j");
+    }
+  }
+  print("Exited from both Loops");
+}
+
+
+* Real-Case Scenario *
+
+void main() {
+  List<List<int>> table = [
+    [1, 2, 3],
+    [4, 0, 6], // This row has an error (0)
+    [7, 8, 9],
+  ];
+
+  outerLoop: for (int i = 0; i < table.length; i++) {
+    for (int j = 0; j < table[i].length; j++) {
+      if (table[i][j] == 0) {
+        print("Error found at row $i, column $j");
+        break outerLoop; // Stop processing completely
+      }
+      print("Processing value: ${table[i][j]}");
+    }
+  }
+  print("Processing stopped.");
+}
