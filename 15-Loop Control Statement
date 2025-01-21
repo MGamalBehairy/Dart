@@ -1,0 +1,25 @@
+There are two Types:
+1- break;
+2- continue;
+
+
+1- ////  break    ////
+
+this statement used to break the flow of the control loop, Its used only within the loop, then it will terminate the loop
+- It will bring the flow out of the "nearest loop".
+Ex.
+
+void main()
+{
+  int i = 1;
+  while (i < 20)
+  {
+    print ("This loop number $i");
+    if(i == 4)
+    {
+      print("the loop will break after it");
+      break;
+    }
+  i++;
+  }
+}
