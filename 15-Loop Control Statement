@@ -7,6 +7,7 @@ There are two Types:
 
 this statement used to break the flow of the control loop, Its used only within the loop, then it will terminate the loop
 - It will bring the flow out of the "nearest loop".
+- its used to get out from a loop if a certain condition happened 
 Ex.
 
 void main()
@@ -15,11 +16,31 @@ void main()
   while (i < 20)
   {
     print ("This loop number $i");
+    i++;
     if(i == 4)
     {
       print("the loop will break after it");
       break;
     }
-  i++;
+  }
+}
+
+
+2-  ////  Continue  ////
+continue will skip this iterate and continue from the next one
+
+Ex.
+void main()
+{
+  int i = 1;
+  while (i < 20)
+  {
+    print("This Loop number $i");
+    i++;
+    if(i == 4)
+    {  
+      print("The loop 4 Skipped");
+      continue;
+    }
   }
 }
