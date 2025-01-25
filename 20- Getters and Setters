@@ -1,0 +1,56 @@
+Getters and setters are "Special Methods" that allow you to read (get) or modify (set) the value of private variables in a controlled way.
+
+* Benefits *
+- Encapsulation : Hide the internal details of class and provide a way to access or update its data safely.
+- Validation: Add Logic to check or modify values before they are accessed or updated.
+- Control: Restrict direct access to variables, ensuring proper data handeling.
+
+How they Work ?
+1- Getters: Used to access (read) the values of the "Private Variables"
+  - Defined using the  ""get""  keyword
+  - No Need to call them like a function,   they act as properties.
+2- Setters: used to modify (write) the value of a private variable
+  - Defined using  ""set""  keyword
+  - allow you to validate or transform the input before assigning it.
+
+Ex.  Without Getters and Setters
+
+class Person {
+  String name = '';  // public variable
+}
+void main()
+{
+  var person = Person();
+  person.name = "Mohamed";  // Directly accessing the variable
+  print(person.name);  // output: Mohamed 
+}
+
+Ex. Using Getters and Setters
+
+class Person {
+  String _name = ''; // Private Variavle (Starts with _)  like:  _var1
+//  Getters to access the value of _name
+  String get name => _name;
+
+//  Setter to update the value of _name with validation
+  set name(String value) {
+    if (value.isNotEmpty) {
+      _name = value;
+    } else {
+      print("Name can't be Empty!");
+    }
+  }
+}
+
+void main() {
+  var person = Person();
+
+  // using the Setter
+  person.name = "Mohamed"; // update the _name to "Mohamed"
+
+  // using the getter
+  print(person.name); // output:"Mohamed"
+
+  // Trying to set an invalid value
+  person.name = ''; // output: Name cann't be Empty!
+}
