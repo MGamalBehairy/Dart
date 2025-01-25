@@ -1,0 +1,28 @@
+1-    ///    isEmpty
+2-    ///    isNotEmpty    => to check if the List, Map, or Set  has items or Not
+
+3-  ///  forEach()  ///    =>  to apply a function to each item in a list
+Ex.
+void main()
+{
+  var names  =  ['mohamed', 'ahmed', 'esraa'];
+  var eachName = names.map((name)  => name.toUpperCase());
+  eachName.forEach(print);
+}
+
+
+4-  ///    where  ///    every    ///    any  ///  =>  to check whether some or all items match a condition
+Ex.
+void main()
+{
+  var teas = ['black', 'red', 'earl grey', 'chamomile'];
+  bool isDecaffeinated(String teaName) => 
+    teaName  == 'chamomile'; 
+  // use where()  to find only items that return true from the provided function
+
+  //  use any()  to check whether at least one item in the collection satesfies a condition
+  print(teas.any(isDecaffeinated));
+
+  // use every()  to check whether all items in a collection satesfy a condition   
+  print(!teas.every(isDecaffeinated));    // note the "!"
+}
