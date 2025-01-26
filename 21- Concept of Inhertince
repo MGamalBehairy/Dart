@@ -1,0 +1,38 @@
+one class can inherit another class, dart can creat a new class from existing class
+- use "extends" keyword to inherit
+
+* Syntax *
+class Parent_Class{
+....
+}
+
+class child_Class extend Parent_Class{
+...
+}
+
+Ex.
+
+class names {
+  void output() {
+    print("Welcome to programming!\nYou are inside the void function");
+  }
+}
+
+class child_name extends names {}
+
+void main() {
+  var name1 = new child_name();
+  name1.output();
+}
+
+* Types of Inheritance: *
+1- Single Inheritance: This inheritance occurs when a class inherits a single-parent class.
+2- Multiple Inheritance: This inheritance occurs when a class inherits more than one parent class.     ////  "Dart doesn’t support this"  /////
+3- Multi-Level Inheritance: This inheritance occurs when a class inherits another child class.
+4- Hierarchical Inheritance: More than one classes have the same parent class.
+
+ Important POINTS:
+ - Dart doesn't support Multiple Inheritence
+ - Child Class inherit all propertes and Methods EXCEPT "Constructor" of Parent Class
+
+ /// Constructor /// : is Special Method (function) in a class that Called Automatically when an object of the class is created  
