@@ -1,0 +1,33 @@
+1- ///    this    ////
+Refers to the current instance of a class. It’s used to access the instance’s properties, methods, or constructors, especially when there's a naming conflict between parameters and properties.
+
+Ex.
+class Person {
+  String name; // Instance property
+  int age;
+
+  // Constructor with parameters matching property names
+  Person(this.name, this.age);
+
+  void displayInfo() {
+    print("Name: $name, Age: $age");
+  }
+}
+
+void main() {
+  Person p1 = Person("John", 25);
+  p1.displayInfo(); // Output: Name: John, Age: 25
+}
+
+2-///  super  ////
+refers to the "parent class" and used to call the methods and properties of the "parent class"
+
+Ex.
+class Animal {
+  void sound() {
+    print("Animal makes sound")
+  }
+}
+
+
+so the "super" is the same with "this", but super refer to the parent class while "this" refer to the same class and both of them call the properties (variables) NOT the Parameters.
