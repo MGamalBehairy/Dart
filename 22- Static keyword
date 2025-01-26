@@ -66,3 +66,61 @@ void main()
 
   User.printUserCount();
 }
+
+Very Important to understand it
+Ex.
+class User {
+  static int totalUsers = 0; // Shared static variable
+
+  String username;
+
+  User(this.username) {
+    totalUsers++; // Increment when a user logs in
+  }
+
+  void displayUser() {
+    print("Username: $username");
+  }
+
+  static void displayTotalUsers() { // Static method to access static variable
+    print("Total users logged in: $totalUsers");
+  }
+}
+
+void main() {
+  User user1 = User("Alice");
+  User user2 = User("Bob");
+  User user3 = User("Charlie");
+
+  // Display total users
+  User.displayTotalUsers(); // Output: Total users logged in: 3
+}
+If you didn’t use static for the count variable, each instance of the Counter class would have its own separate copy of the count variable. 
+When you create new instances, the count variable for each instance would reset to its default value and be incremented independently.
+Note the final result will be "3"
+
+Here’s how it would behave without static:
+class Counter {
+  int count = 0; // Instance variable (not static)
+
+  Counter() {
+    count++; // Increment the instance variable
+  }
+
+  void displayCount() {
+    print("Current count: $count");
+  }
+}
+
+void main() {
+  Counter c1 = Counter();
+  c1.displayCount(); // Output: Current count: 1 (c1's count)
+
+  Counter c2 = Counter();
+  c2.displayCount(); // Output: Current count: 1 (c2's count)
+
+  Counter c3 = Counter();
+  c3.displayCount(); // Output: Current count: 1 (c3's count)
+}
+Note the final Count Result will be just "1", becase for Each instance (c1, c2, c3) has its own count variable, and the changes made to one instance do not affect the others.
+This means the count is always reset to 1 when a new Counter object is created.
