@@ -1,1 +1,63 @@
 static is used to creat properties or methods that belong to the class itself rather than to any individual object of the class 
+Static can be for 
+1- static Variables
+2- static Methods
+
+Benefit: Low Memory Consumption
+        - cuz it decrease the number of variables, you don't need to initiate individual objects 
+
+Ex.  without Static
+
+class mathHelp
+{
+  var gravity = 9.81;
+}
+void main()
+{
+  var x = mathHelp();    // Note: you created a new object called "x"  to be able to use the "gravity"
+  x.gravity = 9.8881;
+  print(x.gravity);
+}
+
+Ex2.  Using static
+
+class mathHelp
+{
+  static var gravity = 9.81;
+}
+void main()
+{
+  print(mathHelp.gravity)  // Note: You used the "gravity" here directly, without need to creat new object. if you tried to print (mathHelp.gravity) but without using static, you will get an error like next example
+}
+
+Ex3.  trying print without using Static
+class mathHelp
+{
+  var gravity = 9.81;
+}
+void main()
+{
+  print(mathHelp.gravity)
+}
+
+Ex4.  Real-case scenario of using static
+class User
+{
+  static int userCount = 0;
+  String name;
+
+  User(this.name) {
+    userCount++;
+  }
+  static void printUserCount() {
+    print("Total User Created is: $userCount");
+  }
+}
+void main()
+{
+  User user1 = User("Mohamed");
+  User user2 = User("Ahmed");
+  User user3 = User("Esraa");
+
+  User.printUserCount();
+}
