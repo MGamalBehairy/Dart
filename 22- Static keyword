@@ -3,8 +3,12 @@ Static can be for
 1- static Variables
 2- static Methods
 
-Benefit: Low Memory Consumption
-        - cuz it decrease the number of variables, you don't need to initiate individual objects 
+Benefit: 
+1) Memory Efficiency: A static property is stored only once in memory, no matter how many objects of the class are created.
+                    - cuz it decrease the number of variables, you don't need to initiate individual objects
+2) Utility Functions: Static methods are perfect for operations like mathematical calculations, data validation, etc., where the logic is not tied to a specific object.
+3) Shared Data: Use static properties to store or manage shared data across all instances of the class.
+         
 
 Ex.  without Static
 
