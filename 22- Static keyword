@@ -1,4 +1,5 @@
 static is used to creat properties or methods that belong to the class itself rather than to any individual object of the class 
+- There is no need to create a class object to access a static variable or call a static method: simply put the class name before the static variable or method name to use them.
 Static can be for 
 1- static Variables
 2- static Methods
