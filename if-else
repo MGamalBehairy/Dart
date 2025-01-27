@@ -1,0 +1,15 @@
+// Note:  in  if-else statement  ->> only one condition will satisfy
+// Ex.
+void main()
+{
+  var x = 10;
+  if (x > 5)
+  {
+    if (x > 3){print("x > 3");}
+    else if (x > 7) {print("x > 7");}
+  }
+  else 
+  {
+    print("x < 10")
+  } 
+}
