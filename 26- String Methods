@@ -1,0 +1,36 @@
+void main()
+{
+  var name = "Hassan";
+
+  print(name.isEmpty);
+  print(name.isNotEmpty);
+  print(name.toLowerCase());
+  print(name.toUpperCase());
+  print(name.contains("assa"));    // is name contain these letters (assa)?
+  print(name.replaceRange(0,2,"Ali"));  // replace from index 0 to 1 (Note: index 2 is not included) with this "Ali"
+  print(name.replaceFirst('a', "Ali"));  // replace first character "a" with "Ali"
+  print(name.replaceAll('a',"Ali"));  // replace all "a" that in "Hassan" with "Ali"
+
+  var text = "       H#a#s#s#a#n";
+  var v1 = text.split("#");  // first convert the String to List, and Split the character whenever you meet "#"
+  print(v1);
+  var v2 = text.split("s"); // output:   [      H#a#  ,  #  ,  #a#n]
+  print(v2);
+
+  var v3 = v1.join("#");    // join: convert List to String
+  prin(v3);
+
+  print(v3.replaceAll('#', ""));    // replace every '#' with "" (zero space)
+
+  print(text.trim());
+}
+
+
+Conclusion:
+variable.split('e')  =>> convert this variable to List,  and every 'e' you meet in the variable will split it to separate item.
+
+variable.join('e')  =>> it must be List and convert the List to String
+
+variable.replaceAll('#', "") =>> replace every '#' with "" (nothing)
+
+variable.trin()  =>> remove spaces that in First for Ex.  "   Moha m e d" will be "Moha m e d" 
