@@ -1,0 +1,26 @@
+void main()
+{
+  var x = -4;
+  print(x.isOdd);
+  print(x.isEven);
+  print(x.isFinite);
+  print(x.isInfinite);
+  print(x.isNan);
+  print(x.isNegative);
+  print(x.abs());    // get the absolute number of x  so -4 will be 4
+
+  var y = 8.5;
+  print(y.round());  // get closer integer number to y  if 8.4 will be 8 and if 8.5 or higher will be 9
+  print(y.floor());  // get the close small integer nummber if 8.9 will be 8
+  print(y.turncate());  //  remove the dcimal value  if -8.9 will be -8
+  print(y.ceil());  // get the high closer integer number if 8.4 will be 9
+}
+
+
+Note the difference between floor() and turncate()
+you will notice it in Negative numbers
+Ex.
+
+var x = -8.9;
+print(x.floor());      it will be -9   ,   cuz -9 is smaller than -8
+print(x.turncate());   it will be -8
