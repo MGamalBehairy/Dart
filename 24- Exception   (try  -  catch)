@@ -1,0 +1,55 @@
+Exception: is an Error happen after launching the Program
+خطأ من ال user 
+وليس خطأ برمجي
+مثلا مفروض ال user 
+يدخل رقم وليس string
+فاذا قام بإدخال String
+يحدث خطأ من نوع Exception
+
+
+Ex.
+import "dart:io";
+void main()
+{
+  print("Enter your Age");
+  var age = stdin.readLineSync()    //    User Entered "Ali"   so Error will happen
+  print("your age is $age");
+}
+
+so to avoid this Error =>> use try & catch
+
+import "dart:io";
+void main()
+{
+  try {
+    print("Enter your Age");
+    var age = stdin.readLineSync()    //    User Entered "Ali"   so Error will happen
+    print("your age is $age");
+    }
+    catch (e) {    // the "e" parameter is the Error,  the "try" will throw the error to parameter "e" in the catch,  also you can print "e" to see the error
+      print("Invalid, Please Enter an Integer number");  // this code will execute only if an error occured in the "try" code,    like if and else,    "else" will not execute if "if" didn't execute
+      print(e)  // print the "e" to see the error
+}
+
+ال Exception ليها انواع
+زي FormatException زي اللي فوق
+فبدل ما كنت تقول catch ، 
+كان ممكن تقول 
+on FormatException
+يعني في حالة حدوث خطأ فقط من نوع FormatException
+
+
+import "dart:io";
+void main()
+{
+  try {
+    print("Enter your Age");
+    var age = stdin.readLineSync()    //    User Entered "Ali"   so Error will happen
+    print("your age is $age");
+    }
+    on FormatException { 
+      print("Invalid, Please Enter an Integer number"); 
+}
+
+Note: The Difference between catch(e) {}  and on FormatException {}
+catch must need parameter but "on FormatException" no need to accept parameter 
