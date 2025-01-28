@@ -13,3 +13,17 @@ void main()
     print("x < 10")
   } 
 }
+
+
+// Conditional Operators
+/*
+  what comes agter the "?" is the if statement, and what comes after the ":" is the else statement
+*/
+void main()
+{
+  var a = 2 , b =5;
+  int smallerNum = 1;
+
+  smallerNum = a<b ? a : b;  //  if (smallerNum = a < b) {print(a);} // where smallerNum = a
+                             //  if-else (smallerNum = a > b) {print(smallerNum);}    // where smallerNum = b
+}
