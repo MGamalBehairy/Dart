@@ -27,3 +27,19 @@ void main()
   smallerNum = a<b ? a : b;  //  if (smallerNum = a < b) {print(a);} // where smallerNum = a
                              //  if-else (smallerNum = a > b) {print(smallerNum);}    // where smallerNum = b
 }
+
+Imp. Ex.
+void main()
+{
+  String name = "Ali";
+  var v1 = name ?? "Mohamed";  //  if v1 "is Empty" then insert "Mohamed" to v1 just if "v1" was Empty, if not =>> keep v1 with the old value "Ali" 
+  print(v1);
+}
+
+
+void main()
+{
+  String name = "Null";
+  var v1 = name ?? "Mohamed";  //  Note:  name is "Null" so the "v1" will be Null,   =>> so "v1" will be "Mohamed"  
+  print(v1);
+}
