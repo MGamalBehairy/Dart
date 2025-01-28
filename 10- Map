@@ -69,6 +69,9 @@ void main()
 // To iterate over the Entries using forEach
 Map x = {5:'a',  3:'c',  8:'f'};
 x.forEach ( (i,j) {      // i =>> refers to the Keys,  and j refers to Values
-  print(i);
-  print(j);
+
+Map x = {5:'a',  3:'c',  8:'f'};
+x.forEach ( (keys, values) {      
+  print("key: $keys");
+  print("value: $values");
 } ); 
