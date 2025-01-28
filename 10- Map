@@ -66,3 +66,9 @@ void main()
    numbers_Map["20"] = "Twenty";  // it will go throw an error, because you didn't declare the map will contain String, so it thought it will be <String, int>, so you need to specify it as <dynamic, dynamic>  =>     var numbers_Map = <dynamic, dynamic>{"1": 1, "2": 2, "3": 3};
   print(numbers_Map);
 }
+// To iterate over the Entries using forEach
+Map x = {5:'a',  3:'c',  8:'f'};
+x.forEach ( (i,j) {      // i =>> refers to the Keys,  and j refers to Values
+  print(i);
+  print(j);
+} ); 
