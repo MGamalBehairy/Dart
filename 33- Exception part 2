@@ -1,0 +1,52 @@
+// Exception (Error)
+void main ()
+{
+  info();    // there is Exception so you w'll get an Error,  you need to put the function between catch&try as next Ex
+}
+info() {
+  for(int i = 1; i<= 10; i++) {
+    if(i == 5) {throw FormatException}    // Note: we put here FormatException intentional
+    else {print("i: $i");}
+  }
+}
+
+---------------------------
+
+// Exception between try-catch
+void main()
+{
+  try {          // you Put the function between try-catch(), so if any Exception happedned, the program will continue and will not inturupted
+    info();
+  }
+  catch (e) {
+    print(e);
+  }
+}
+info() {
+  for (int i = 1; i<= 10; i++) {
+    if(i == 5) {throw FormatException;}
+    else {print("i: $i");}
+  }
+}
+
+// OR you can make it better by putting the try-catch in the function itself
+// Same Ex.
+
+// Exception between try-catch
+void main() {
+  info();
+}
+
+info() {
+  try {
+    for (int i = 1; i <= 10; i++) {
+      if (i == 5) {
+        throw FormatException;
+      } else {
+        print("i: $i");
+      }
+    }
+  } catch (e) {
+    print(e);
+  }
+}
