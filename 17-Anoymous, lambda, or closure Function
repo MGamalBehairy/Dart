@@ -1,12 +1,15 @@
 ///    Anonymous Function  //// also its called "Lambda or Closure"
 
-- Its like normal function but "without name"
+- Its like normal function but "without name", also it can be with name
 - Its used when u want quick, one-time function , especially for passing as an argument to higher-order functions (like forEach, map)
-
+- Its used to minimize the Code
+- I think the AnonoymousFunction: is the function that don't have name, but lambda Function is the function with name but minimize the code
 * Syntax *
 (parameter){
   // function body
 };
+// OR
+lambada1 (x, y) => x+y;    // " => " means "return"
 
 Ex.
 void main(){
@@ -51,3 +54,41 @@ void main()
 
   print(fruits);
 }
+
+// Normal Function1
+fun1(x, y) {
+  return x+y;
+}
+// using lambda
+fun1 (x, y) => x+y;
+
+// Normal Funxtion2
+fun2(x, y) {
+  print(x+y);  
+}
+
+// Lambda Function
+fun2 (x, y) => print(x+y);
+
+// Normal Function
+main () 
+{
+  var x = [3, 4, 5, 5, 7];
+  x.forEach( (){      // forEach(  () {}  );
+    print(i);
+  } );
+}
+
+// lambda
+main()
+{
+  var x= [3 ,4 ,5, 6, 7];
+  x.forEach( (i) => print(i);  );    // forEach( () => );
+}
+
+// Note: You can store the Lambda function in Variable, but it should be Anonoymous "cuz you can't have 2 names for the same thing"
+like this Ex. earlier
+fun2 (x, y) => print(x+y);
+// store the lambdafunction in a variable
+var v1= fun2 (x, y) => print(x+y);  // you will get an error, you must delete the name of lambda function first
+var v1 = (x, y) => print(x+y);
