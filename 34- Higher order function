@@ -1,0 +1,32 @@
+The idea of Hogher Order Function: is a function that takes another funxtion as a parameter or returns the function as its result
+
+// Ex1 passing a Function as a Paramter
+void repeatAction(int times, Function action) {
+  for (int i = 0; i< times; i++) {
+    action();  // Calling the function passed as a parameter
+  }
+}
+
+void sayHello() {
+  print("Hello!");
+}
+
+void main()
+{
+  repeatAction(3, sayHello);
+}
+
+
+
+
+// Ex2  Returning a Function  "A Function can return another Function"
+
+Function multiplyBy(int factor) {
+  return (int number) => number * factor;
+}
+
+void main()
+{
+  var doubleNumber = multiplyBy(2);    // Returns a function that multiplies by 2
+  print(doubleNumber(5));  // Output: 10
+}
