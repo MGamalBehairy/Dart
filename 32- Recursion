@@ -1,0 +1,9 @@
+void main()
+{
+  print(rec(6));
+}
+
+rec(int n) {
+  if (n!= 0) return n+rec(n-1);
+  else return 0;
+}
