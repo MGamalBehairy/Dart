@@ -1,11 +1,11 @@
-sum (x, [y]) {      // Note: [y]  is between two brackets ->> it mean it's optional
+sum (x, [y]) {      // Note: [y] or {}  is between two brackets ->> it mean it's optional
+  print("x: $x");
+  print("y: $y")
   return x+y;
 }
 void main()
 {
   sum(3);    // passed here only one value
-  print("x: $x");
-  print("y: $y")
 }
 
 ------------------------------
@@ -18,4 +18,48 @@ sum (x, y) {      // Note: y  here is required NOT optional, becuase there is no
 void main()
 {
   sum(3);  // you'll get an error, cuz u passed one value but two required.
+}
+
+
+// The optional parameters must be in the "Last"
+// Wrong Ex.
+sum (x, [y], z) {      // Note: [y]  is before "z"   so if the user pass only 2 values, you will get an Error, thats why the optional parameter must come in the Last
+  return x+y;
+}
+void main()
+{
+  sum(3,6);    
+  print("x: $x");
+  print("y: $y");
+  print("z: $z")
+}
+
+// Correct Ex.
+sum (x, z, [y]) {
+  print("x: $x");
+  print("y: $y");
+  print("z: $z")  // z will take value "6"   and y will be NULL
+
+  // return x+y+z;    // Note:  you can't  add Null value with numbers, you'll get error
+}
+void main()
+{
+  sum(3,6);    
+}
+
+
+
+// to pass many Optional Parameters =>>  use {}
+
+sum(x, z, {a, b, c}) {
+  print("x: $x");
+  print("z: $z");
+  print("a: $a");
+  print("b: $b");
+
+  // return x+y+a+b+c; // you cant Add Null values with number
+}
+void main()
+{
+  print(sum(2, 6));
 }
