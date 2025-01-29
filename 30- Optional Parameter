@@ -1,0 +1,19 @@
+sum (x, [y]) {      // Note: [y]  is between two brackets ->> it mean it's optional
+  return x+y;
+}
+void main()
+{
+  sum(3);    // passed here only one value
+}
+
+------------------------------
+
+without the [], you will get an error if you just pass 1 value to the two parameters as next Ex.
+
+sum (x, y) {      // Note: y  here is required NOT optional, becuase there is no [ ] 
+  return x+y;
+}
+void main()
+{
+  sum(3);  // you'll get an error, cuz u passed one value but two required.
+}
