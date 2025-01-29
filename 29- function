@@ -1,0 +1,45 @@
+info(String namem) {      // Define the function with parameter "name" with type "String
+  print("Hello $name")
+}
+void main() {
+  info();  // call the funtion
+}
+
+
+// you can define a parameter without type, so it can be any type (int, String, bool) as next Ex.
+
+info(message) {      // Note: "message" here is without any type
+  print("Message is: $message")
+}
+void main() {
+  info(); 
+}
+
+
+// Examples of Function Types (with parameters, without parameters, with "return", ....)
+void main()
+{
+  fun1();
+  fun2(6,5);    // Note: because this functio is int, so you need to print it, "NOT just Call it"()
+  fun2();
+  fun4(8,2.5);
+}
+
+fun1() {
+  print(2+6);
+}
+fun2(x,y) {
+  print(x+y);
+}
+fun3() {
+  return 3+4;
+}
+fun4(int x, double y) {
+  return x+y;
+}
+
+Notce: 
+if the function is int, double, float  ->> you need to print it, if you just called it (even the function itself return number, it will not be shown, so you need to print it) as fun2 (earlier)
+Note: if function "return" something ->> You need to print it,  NOT just call it cuz it will not be shown 
+  and if the function "print", you just need to call it.
+  
