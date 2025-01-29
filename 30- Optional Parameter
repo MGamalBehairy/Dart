@@ -61,5 +61,45 @@ sum(x, z, {a, b, c}) {
 }
 void main()
 {
-  print(sum(2, 6));
+  print(sum(2, 6, b:7));    // Note: I added value to a specific optional parameter
 }
+
+Real_case Ex.
+
+void info(String firstName, String lastName, {int age, phone, email,int height}) {
+  print("firstName: $firstName");
+  print("lastName: $lastName");
+  print("age: $age");
+  print("phone: $phone");
+  print("email: $email");
+  print("height: $height");
+}
+void main()
+{
+  info("Mohamed", "Behery", height: 180);
+}
+
+---------------------------------------------------
+
+// Default Parameters
+// same last Ex. but with default parameters
+
+void info(firstName, lastName, {age= 20, phone= 4654132, email, height= 180}) {
+  print("firstName: $firstName");
+  print("lastName: $lastName");
+  print("age: $age");
+  print("phone: $phone");
+  print("email: $email");
+  print("height: $height");
+}
+void main()
+{
+  info("Mohamed", "Behery", height: 160, phone: 12345);
+}
+
+
+Conclusion:
+- Optional Paramters must come in the Last
+- can't add Null values with numbers
+- Default parameters will be replaces if user pass value to parameters, but if the user didn't pass any value to the optional parameter =>> the default parameter will take it place
+- Default parametes must come only with Optional parametes, (you can't pass Default parametes with "required" parameters)
