@@ -4,6 +4,8 @@ sum (x, [y]) {      // Note: [y]  is between two brackets ->> it mean it's optio
 void main()
 {
   sum(3);    // passed here only one value
+  print("x: $x");
+  print("y: $y")
 }
 
 ------------------------------
