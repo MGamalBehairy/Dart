@@ -1,4 +1,4 @@
-The idea of Hogher Order Function: is a function that takes another funxtion as a parameter or returns the function as its result
+HOF:  The idea of Hogher Order Function: is a function that takes another funxtion as a parameter or returns the function as its result
 
 // Ex1 passing a Function as a Paramter
 void repeatAction(int times, Function action) {
@@ -13,7 +13,7 @@ void sayHello() {
 
 void main()
 {
-  repeatAction(3, sayHello);
+  repeatAction(3, Function sayHello);
 }
 
 
