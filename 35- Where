@@ -1,0 +1,109 @@
+this topic discuss how to " Filter the Data" 
+if u have a Data in List, Set or Map =>> then u need to analyze or filter this data based on some conditions 
+
+Ex.  how to use where()    // Note: where() is High Order Function
+void main()
+{
+  var a1 = [1, 4.5, 2, 9.2, 5];
+
+  var bb = a1.where( (element) => true );      // The "element" will pass throw the list of "a1", and will ake their values, so the "element" will be "1" and "4.5" and "2" ....,   and u return true // mean all return all values "true" 
+  print(bb);
+}
+
+
+void main()
+{
+  var a1 = [1, 4.5, 2, 9.2, 5];
+
+  var bb = a1.where( (element) => element < 4 ); // the condition here is to return only values that smaller than 4
+  print(bb);
+}
+
+//// firstWhere()  =>> only return the "first value" that match the condition
+void main()
+{
+  var a1 = [1, 4.5, 2, 9.2, 5];
+
+  var bb1 = a1.where( (element) => element < 4 ); // output:  1    only the first value that match the condition
+  print(bb1);
+}
+// Note: if there is no any value that match the condition, it will pas an Error nad program will corrupt, so u need to add "or Else()" as next Ex.
+void main() {
+  var a1 = [1, 2, 3, 4, 5];
+  a1.firstWhere((element) => element < 4, orElse: () => 0);  // if there is no any value match the condition, then return "0"
+  print(a1);
+}
+
+
+
+/// lastWhere()    =>> return "last value" that match the condition
+
+/// indexWhere()    ==> return the "index" that match the value
+void main()
+{
+  var a1 = [1, 4.5, 2, 9.2, 8];
+
+  var bb = a1.indexWhere( (element) => element % 2 == 0 );  // Output: 2     
+  print(bb);
+}
+// Note: you can determine the start 
+
+void main()
+{
+  var a1 = [1, 4.5, 2, 9.2, 8];
+
+  var bb = a1.indexWhere( (element) => element % 2 == 0, 3 );  // Output: 2     
+  print(bb);
+}
+
+
+/// lastIndexWhere()    ==> return the "Last Index" that match the value
+
+/// whereType()<double>    =>> return the data that only with type "double" 'in this ex'
+
+void main()
+{
+  var a1 = [1, 4.5, 2, 9.2, 5];
+
+  var bb1 = a1.whereType<double>(); // output: (4.5, 9.2)
+  print(bb1);
+}
+
+
+////  retainWhere()    =>> its the same like "where()"   but it change the list it self,  and where()  doesn't affect on the list itself
+void main() {
+  var a1 = [1, 2.3, 3, 4.5, 6];
+  print(a1);
+  a1.where((element) => element % 2 == 0);      
+  print(a1);                                      // Note: here it will return all values becuase "where()"  doesn't affect on the list itself
+  a1.retainWhere((element) => element % 2 == 0);
+  print(a1);                                    // and here:  you changed the List itself,   so it apply the changes on the List itself
+}
+
+
+
+//// removeWhere()    =>> remove the data that match the condition
+
+void main()
+{
+  var a1 = [1, 4.5, 2, 9.2, 5];
+
+  a1.removeWhere( (element) => element % 2==0);  // remove all elements that %2==0 ///Note: removeWhere() apply also the changes on the List itself
+  print(a1);
+}
+
+/// singleWhere()    =>>>  the Condition should only match one value,   if more than one value found , it will throw "Error" (really error not Exceptional error) and the program will corrupt
+// Important. you need to use singleWhere() between ""try-catch""
+void main()
+{
+  var a1 = [1,2,3,4,5];
+  a1.singleWhere( (element) => element % 2 ==0);  // You will get an Error, cuz many values in the List a1 match the condition %2==0
+  print(a1);
+}
+// Correct Example
+void main()
+{
+  var a1 = [1,2,3,555,5];  // Note: changed the value 4 to 555 "see previous Ex."
+  a1.singleWhere( (element) => element % 2 ==0);  // only one value found that match the condition, so it will execute correctly
+  print(a1);
+}
