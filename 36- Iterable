@@ -56,3 +56,64 @@ var list7 = [  if(list1.lemgth == 4) ... list1];    // if length of list1 == 4, 
   var list9 =  [ ... list8];    // You will get an Error, cuz list8 is Empty
   var list10 = [ ...? list8 ];  // Note the "  ?  " , so now you will not get an Error
 }
+
+
+
+///  .map() Function   NOT   map(key-value structure) ////
+The .map() function is like a factory. It takes each item from a list, does some processing on it, and creates a new version of the item.
+
+// IMPORTANT:  Think of .map() as a promise to do work only when asked. It does not do the work immediately!
+
+// Return Type: Iterable (needs .toList() for a List)
+
+// Example of `.map()`
+var newNumbers = numbers.map((num) {
+  return num * 2;
+});
+print(newNumbers);
+// Output:  (2, 4, 6)      =>>> NOTE: this Iterable NOT List
+
+
+
+////  Very IMPORTANT Examples  ////
+/// Differencce between these 2 Examples  is just   " print(b); "  in the Ex2
+Ex1:
+void main() {
+  var a1 = [1, 2.5, 3.2, 4, 5, 6];
+  var sum = 0.0;
+  var b = a1.map((e) {
+    sum += e;
+    return e;
+  });
+  print(sum);          ////   output:  0.0    =>>> Dart is Smart and saya: hey, you never actually used "b", so I won’t waste time doing the .map() operation!"
+}
+
+void main() {
+  var a1 = [1, 2.5, 3.2, 4, 5, 6];
+  var sum = 0.0;
+  var b = a1.map((e) {
+    sum += e;
+    return e;
+  });
+  print(b);
+  print(sum);        ///  output: 27.5
+}
+Now we print b, so Dart has to compute b.
+This forces .map() to execute.
+Now sum is updated correctly.
+
+// How to Fix it:
+1- is to call or use the variable where u define it .map() as previous Ex.  "b"  , and we print(b);  to Execute the .map() operation
+2- OR to convert the .map() to List ,    cuz  its by default return Iterble type NOT List
+
+// so if U need to use .map() function, u need to convert it to List to Execute it Emmediately or to use the varaible where u define the .map()
+void main() {
+  var a1 = [1, 2.5, 3.2, 4, 5, 6];
+  var sum = 0.0;
+  var b = a1.map((e) {
+    sum += e;
+    return e;
+  }).toList();      // Covert "b" from Iterable to List
+  // Empty, not print(b)
+  print(sum);        ///  output: 27.5    // Note: we didn't call "b" here
+}
