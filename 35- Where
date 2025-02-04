@@ -52,7 +52,7 @@ void main()
 {
   var a1 = [1, 4.5, 2, 9.2, 8];
 
-  var bb = a1.indexWhere( (element) => element % 2 == 0, 3 );  // Output: 2     
+  var bb = a1.indexWhere( (element) => element % 2 == 0, 3 );  // Output: 8 "NOT 2, cuz u determine the start from index 3"     
   print(bb);
 }
 
