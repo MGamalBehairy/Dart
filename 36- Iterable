@@ -1,0 +1,30 @@
+Iterable: Object (List, Map, Set) Contains Data that can be iterated upon it.
+// Every Iterable you can use with it (for in) as next Ex.
+
+void main()
+{
+  var a1 = [1,2,3,4];
+  for(item in a1) {
+    print(item);
+  }
+}
+
+/// Important ////
+You can't assign the "Iterable" to List, as next Example,   
+Because:
+- List is an Iterable, but an Iterable is not necessarily a List.
+- An Iterable only guarantees that you can iterate (loop) over it.
+- A List has additional methods like add(), remove(), insert(), etc.
+
+void main() {
+  Iterable<int> a = [1, 2, 3, 4];
+  List b = a;  /// Error, you can't Assign Iterable to List
+  print(b);
+}
+
+// How to fix it:   convert the Iterable to List
+void main() {
+  Iterable<int> a = [1, 2, 3, 4]; 
+  List<int> b = a.toList(); // ✅ Convert Iterable<int> to List<int>,  OR  you can declare "a" as a List from the Beginning
+  print(b); // Output: [1, 2, 3, 4]
+}
