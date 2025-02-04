@@ -28,3 +28,31 @@ void main() {
   List<int> b = a.toList(); // ✅ Convert Iterable<int> to List<int>,  OR  you can declare "a" as a List from the Beginning
   print(b); // Output: [1, 2, 3, 4]
 }
+
+///  Seperate Operator  ///  =>>  ...
+
+Ex.
+void main()
+{
+  var list1 = [1,2,3,4];
+  var list2 = [1, ... list1,  ... [7,8,9] ];  ///  ...  =>> refers to Sperate Operator, means Extract the Values of List "list1" , also the values of list [7,8,9]
+// Output: [1,  1,2,3,4  , 7,8,9]
+
+// Note: the Difference:
+  var list3 = [[123]];    Output: [1,2,3]      // it will be appeared as a List, without Extract its Values
+  var list4 = [... [1,2,3]]; Output: 1,2,3    //                      as Values
+
+var list5 = [ list1];        // also will be shown as a List          =>> output:  [1,2,3,4]
+var list6 = [... list1];    // it will Extract the values from List1  =>> output: 1,2,3,4
+
+  // Also you can add a Condition to Extract or print List
+var list7 = [  if(list1.lemgth == 4) ... list1];    // if length of list1 == 4, then Extract the values from list1,  and if NOT match the condition =>> it will print it as A List NOT values "will not extract the values"
+
+  // But there is a problem:
+  // if the list was "null", and you tried to Extraxt the Values from it, you Will get an Error
+  // to fix this issue use =>>  ?
+
+  var list8 = null;
+  var list9 =  [ ... list8];    // You will get an Error, cuz list8 is Empty
+  var list10 = [ ...? list8 ];  // Note the "  ?  " , so now you will not get an Error
+}
