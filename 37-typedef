@@ -1,4 +1,4 @@
-typedef =>> is a shortcut for function type
+typedef =>> is a shortcut for function type OR reserved keyword that gives an existing datatype a "nickname"
 
 Ex. 
 Imageine you have a long street name:
@@ -8,3 +8,30 @@ Imageine you have a long street name:
 But instead of saying this long name every time, you create a shortcut name:  "My Home"
 Now, every time someone asks you where you live, you just say "My Home", and they know what you mean.
 
+Ex. Traditional way
+void calculator (double Function(double, double) operation, double x, double y) {
+  print("Result ${operation(x, y)}");
+}
+
+double add (double a, double b) {
+  return a + b;
+}
+
+double multiply (double a, double b) {
+  return a* b;
+}
+void main() {
+
+}
+
+
+Ex2 // without typedef
+char user1[25]= "Mohamed";
+
+// INSTEAD, using typedef
+
+typedef user char[25];
+void main()
+{
+  user user1 = "Mohamed";            =>> user is Equal to " char [25]; " 
+}
