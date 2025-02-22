@@ -1,3 +1,9 @@
+------------ 3 Types of Operators -----------------------
+1) prefix  operators                                   -x, ++x, !true
+2) infix   operators                                   a + b, x > y
+3) postfix operators                                   x++, y--
+
+
 1- Arithmetic Operation
 
 ~/, +,  -,  *,  /,  %,   -expr => ex.  -a = -2 (if a = 2)
