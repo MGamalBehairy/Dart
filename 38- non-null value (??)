@@ -1,0 +1,12 @@
+??  =>> non-null value
+
+Ex.
+
+void test() {
+  const String? firstName = null;
+  const String? middleName = "Gamal";
+  const String? lastName = null;
+
+
+  const firstNonNullValue = firstName ?? middleName ?? lastName;     // it will pick the first Non-Null Value  "Gamal"
+}
