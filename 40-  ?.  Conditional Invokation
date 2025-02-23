@@ -1,0 +1,17 @@
+?.      =>>   is a safety feature in Dart that prevents calling Methods or accessing Properties on null objects 
+
+
+Ex.  Without using ?.    // Error
+void main() {
+  String? name; // name is null
+  print(name.length); // ERROR: Cannot call length on null
+}
+
+Solution 
+Ex. Using  ?.
+
+void main() {
+  String? name;
+  print(name?.length);  ?. will check first if name is null,  if it is null, then it will return null without crashing , and if Not null then it will call "length" 
+}
+
