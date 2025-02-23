@@ -1,0 +1,19 @@
+??=    =>>    Null aware assignment Operator    "assigns a value only if the variable is Null"
+- if the variable has a Value, it keeps the existing value and ignore the new value      and then "??=" does nothing
+- if the variable is Null,  it assign a new value
+
+Ex.
+
+void test(String? firstName, String middleName) {
+  String? name = firstName;   // 'name' must be nullable because 'firstName' is nullable
+  name ??= middleName;        // if "name" is nullable, assign "middleName" to it
+  print(name);
+}
+
+
+//// Alternative way to write this code without ??=
+
+void test(String? firstName, String? middleName) {
+  String name = firstName ?? middleName ?? "Default Name"; 
+  print(name);
+}
