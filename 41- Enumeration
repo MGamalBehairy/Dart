@@ -32,4 +32,39 @@ void test() {
 }
 
 
+Ex. use switch with Enumeration
+
+enum AnimalType = {"Cat", "Dog", "Bunny"};
+void test() {
+  switch(AnimalType) {
+    case AnimalType.Cat:
+      print("Cat");
+      return;
+    case AnimalType.Dog:
+      print("Dog");
+      return;
+    case AnimalType.Bunny:
+      print("Bunny");
+      return;
+  }
+  print("Code is Finished!");    // imp: this line will not be Executed, cuz we used   "return NOT break"   ,   so the program will stop
+}
+
+
+enum AnimalType = {"Cat", "Dog", "Bunny"};
+void test() {
+  switch(AnimalType) {
+    case AnimalType.Cat:
+      print("Cat");
+      break;
+    case AnimalType.Dog:
+      print("Dog");
+      break;
+    case AnimalType.Bunny:
+      print("Bunny");
+      break;
+  }
+  print("Code is Finished!");    // NOTE: we used here "break"   and this will just break and get out from "switch" but will execute the rest of the code
+}
+
 // Note: when Declare Enumeration,   we capitalize each word of the enum name, NOT camelCase but PascalCase
