@@ -30,3 +30,6 @@ void test() {
   print(PersonProperties.firstName)      // Output:  PersonProperties.firstName 
   print(PersonProperties.firstName.name) // Output: firstName        // Note the Differnece, I used here .name  which is Default Properties
 }
+
+
+// Note: when Declare Enumeration,   we capitalize each word of the enum name, NOT camelCase but PascalCase
