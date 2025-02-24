@@ -1,0 +1,32 @@
+Enumeration used in "Fixed Values"
+
+Ex.
+
+enum Weeekday = {"saturday", ,"Sunday", "Monday", "Tuesday", "Wedneday", "Thursday", "Friday" };
+
+enum TrafficLight = {"Red", "Yellow" ,"Green"};
+
+
+and the Enumeration has properties
+
+
+enum Weeekday = {"saturday", ,"Sunday", "Monday", "Tuesday", "Wedneday", "Thursday", "Friday" };
+Weekday today = Weekday.Monday;
+if (today == Weekday.Monday) {
+  print("It's Monday");
+}
+
+////   Looping through Enum  /////
+
+enum Weeekday = {"Saturday", ,"Sunday", "Monday", "Tuesday", "Wedneday", "Thursday", "Friday" };
+for (var day in Weekday) {
+  print(day);
+} 
+
+////   Default properties in Enumeration
+
+enum PersonProperties { firstName, lastName, age}          // Note:   No Semi-Colon
+void test() {
+  print(PersonProperties.firstName)      // Output:  PersonProperties.firstName 
+  print(PersonProperties.firstName.name) // Output: firstName        // Note the Differnece, I used here .name  which is Default Properties
+}
