@@ -1,0 +1,24 @@
+classes is a blueprint for creating objects. It defines Properties (Variables) and methodds (funciions) that object will have, 
+and to use these variables and methods, u need to declare Object first from the Class, cuz u can't use these functions and variables on the class itself but objects
+
+
+
+Ex.   class of car
+
+//  definition of the class
+class Car {
+  String? brand;
+  int? speed;
+
+  void displayInfo() {
+    print("The Brand is $brand, and the speed is $speed");
+  }
+}
+
+// create object from this class
+
+Car myCar = Car();      // create object
+myCar.brand = "Toyota";
+myCar.speed = 400;
+
+myCar.displayInfo();
