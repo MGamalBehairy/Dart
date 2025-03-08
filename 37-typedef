@@ -35,3 +35,101 @@ void main()
 {
   user user1 = "Mohamed";            =>> user is Equal to " char [25]; " 
 }
+
+
+
+
+Note the next example to see the importance of "typedef"
+
+// Correct Example
+calc (x, y, Function s)
+{
+  s(x, y);
+}
+void main()
+{
+  calc(3, 4,  add);
+}
+
+info(){print{"Hello"};}
+
+add(x, y){
+  print(x+y); 
+}
+sub(x, y){
+  print(x-y); 
+}
+div(x, y){
+  print(x/y); 
+}
+
+calc (x, y, Function s)
+{
+  s(x, y);
+}
+void main()
+{
+  calc(3, 4,  info);      // Note: it is the same exactle the last Ex.  but here I called "info" function , which doesn't take any parameters like add, sub, div,   so the user will get an error when run the program 
+}                         // and to avoid this error,  u need to make sure the  function accept two parameters,   so u  need to use  typedef     
+
+info(){print{"Hello"};}
+
+add(x, y){
+  print(x+y); 
+}
+sub(x, y){
+  print(x-y); 
+}
+div(x, y){
+  print(x/y); 
+}
+
+// Ex with typedef
+typedef operation (a, b);
+calc (x, y, operation s)    // note: we here used operation not Function ,   now when u try to call "info" function, u will get an error
+{
+  s(x, y);
+}
+void main()
+{
+  calc(3, 4,  info);  // now u will an error, u need two use function that accept two parameters
+}
+
+info(){print{"Hello"};}
+
+add(x, y){
+  print(x+y); 
+}
+sub(x, y){
+  print(x-y); 
+}
+div(x, y){
+  print(x/y); 
+}
+
+
+// Ex2
+
+typedef operation(a, b);
+
+void main()
+{
+  operation op;   // now op is any function that accept two parameters
+  op = add;
+  op(4,3);  // output:  7
+
+  op = sub;
+  op(4, 3); //output: 1
+}
+
+info(){print{"Hello"};}
+
+add(x, y){
+  print(x+y); 
+}
+sub(x, y){
+  print(x-y); 
+}
+div(x, y){
+  print(x/y); 
+}
