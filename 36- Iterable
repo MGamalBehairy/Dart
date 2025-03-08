@@ -29,7 +29,7 @@ void main() {
   print(b); // Output: [1, 2, 3, 4]
 }
 
-///  Seperate Operator  ///  =>>  ...
+///  Seperate Operator  ///  =>>  ...     OR   ...?   to make sure the value is not Empty, to not get run-time error
 
 Ex.
 void main()
@@ -39,7 +39,7 @@ void main()
 // Output: [1,  1,2,3,4  , 7,8,9]
 
 // Note: the Difference:
-  var list3 = [[123]];    Output: [1,2,3]      // it will be appeared as a List, without Extract its Values
+  var list3 = [[123]];    Output: [1,2,3]      // it will be appeared as a List, without Extract its Values     [2 Dimension List]
   var list4 = [... [1,2,3]]; Output: 1,2,3    //                      as Values
 
 var list5 = [ list1];        // also will be shown as a List          =>> output:  [1,2,3,4]
@@ -60,7 +60,7 @@ var list7 = [  if(list1.lemgth == 4) ... list1];    // if length of list1 == 4, 
 
 
 ///  .map() Function   NOT   map(key-value structure) ////
-The .map() function is like a factory. It takes each item from a list, does some processing on it, and creates a new version of the item.
+The .map() function is like a factory. It takes each item from a list, does some processing on it, and creates a new version of the item.  it's like     "in each"
 
 // IMPORTANT:  Think of .map() as a promise to do work only when asked. It does not do the work immediately!
 
