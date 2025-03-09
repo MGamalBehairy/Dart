@@ -1,7 +1,10 @@
 classes is a blueprint for creating objects. It defines Properties (Variables) and methodds (funciions) that object will have, 
 and to use these variables and methods, u need to declare Object first from the Class, cuz u can't use these functions and variables on the class itself but objects
-
-
+// # blueprint
+class className {
+  Attributes = variables
+  Actions    = Functions
+}
 
 Ex.   class of car
 
