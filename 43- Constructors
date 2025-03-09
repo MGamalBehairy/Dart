@@ -1,0 +1,47 @@
+constructors is a Special function and get executed automaticallyonce u create an object, (u didn't call the function, once u create new object, the constructor get executed), and the constructor name  should be the same of the class name. 
+- so once u create an object, the constructors will be executed
+
+Note the next 2 examples to see how constructors works.
+
+Ex1.class car {
+  var model = "s";
+  var speed = 12;
+  var color;
+  info() {
+    print("The model is $model");
+    print("The speed is $speed");
+    print("The color is $color");
+  }
+}
+
+void main() {
+  car car1 = car();
+  car1.model = "BMW";
+  car1.speed = 250;
+  car1.color = "Black";
+
+  car1.info();      // Note: here u called the "info()" function,   and if u didn't =>> nothing will be return
+}  
+
+//Ex2  using constructor
+// same Ex as the previous,  just replace the "info" with "car" to be constructor. and also, don't call the function
+
+class car {
+  var model = "s";
+  var speed = 12;
+  var color;
+  car() {          // replaced the "info" with "car", to be the same as the calss name
+    print("The model is $model");
+    print("The speed is $speed");
+    print("The color is $color");
+  }
+}
+
+void main() {
+  car car1 = car();
+  car1.model = "BMW";
+  car1.speed = 250;
+  car1.color = "Black";
+  // Note: Even we didn't call the function,  the function get executed. 
+}
+
