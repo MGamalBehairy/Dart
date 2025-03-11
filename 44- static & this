@@ -1,0 +1,34 @@
+static used in the Class
+to make the function or Method refer to the class itself, so u don't need to use objects 
+
+class Human(){
+
+  static                                // static: make the class able to use the function!
+  info(fName, lName, age, length){ 
+    print("First Name is: $fName");
+    print("Last Name is: $lName");
+  }
+}
+main(){
+  // var o1 = new Human();
+  // o1.info(lName: "Ahmed", age: 20, length: 190)
+  
+  Human.info(lName: "Ahmed", age: 20, length: 190);      // Note: here we didn't use any object, we used the Class itself
+}
+
+
+
+/// also static used with the variables,  to refer that this variable belongs to the class NOT the Object.
+
+class Human(){
+  static String fName;
+  info(p_fName, lName){
+    print("First name is:  ${this.fName}");    // you will get an error, cuz "this"  refer to the object,  and we said that "static"  make the variable belongs to the class NOT the object, so the object can't use it 
+  }
+}
+
+
+
+
+//////////////  this    ////////
+this refer to the object,      watch more videos to understand it 100%
