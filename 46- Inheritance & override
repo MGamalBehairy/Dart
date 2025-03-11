@@ -1,0 +1,97 @@
+Class inherit from another class
+
+Ex.  without inheritance
+
+class A{
+  info(){
+    print("Hello");
+  }
+}
+main(){
+  var  ob = new A();
+  ob.info();
+}
+
+
+
+//  so if we created another class called "B"  and try to declare an object with "info"   like this    b.info(); ,  we will get an error
+like this:
+
+class A{
+  info(){
+    print("Hello");
+  }
+}
+
+class B{}
+
+main(){
+  var  ob = new B();
+  ob.info();  // Error
+}
+
+// so the solution is to inherit class B from class A  using "extends"  keyword
+
+class A{
+  info(){
+    print("Hello");
+  }
+}
+
+class B extend A{}    // now we inherited class A to B, so we can use all Methods or Attriputed of Class A
+
+main(){
+  var  ob = new B();
+  ob.info();  
+}
+
+// also if we create a new class "C" and inherit from "B" ,  the class "C" will inherit also from class "A" because class"B" inherit from "A"
+
+class A{              // Direct Super Class to B,  and Super Class InDirect to Class C
+  info(){
+    print("Hello");
+  }
+}
+
+class B extend A{      // Direct Super Class to Class C,   and Sub Class according to Class A
+  info2(){
+    print("Info22");
+  }
+}    
+
+class C extends B {}      // Sub Class
+main(){
+  var  ob2 = new C();
+  ob2.info();  // we used function "info" from class A to C !  
+}
+
+
+
+///////////////////////////   Override    ///////////////////////////////////
+
+if we have two classes, and both of them have function and for example print something,    so we can create only one function and then reuse this function again and modify it "change the statement for example"
+
+class A{
+  info(){
+    print("Hello From A");
+  }
+}
+class B{
+  info2(){    // this new function  "info2", not the same with "info"
+    print("Hello From B");
+  }
+} 
+
+//  use Override
+
+
+class A{
+  info(){
+    print("Hello From A");
+  }
+}
+class B{
+  info(){    // NOTE: we used here the same function of A "info" !    ,,  so we didn't create new function, just used the function of class A, and modify on it
+    print("Hello From B");
+  }
+} 
