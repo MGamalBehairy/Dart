@@ -1,0 +1,43 @@
+we need to use "super" keyword when we inherit Method(function) or Attripute (variable) from class to another
+Ex.
+
+
+class A{
+  info(){
+    print("Hello");
+  }
+}
+
+class B extends A {
+  test(){
+    info();    // we used the function from another class ,so we need to use super =>>   super.info(); 
+  }
+}
+main(){
+  var ob = new B()
+  ob.info();
+}
+
+
+// Another Ex
+
+class A{
+
+var age;
+  info(){
+    print("Your age is: $age");
+  }
+}
+
+class B extends A {
+  
+  var age22;
+  test(){
+    this.age22;      // we used "this", cuz "age22" existsin this class
+    super.age;      // and used "super"  cuz "age" exist in another class
+  }
+}
+main(){
+  var ob = new B()
+  ob.info();
+}
