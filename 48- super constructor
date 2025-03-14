@@ -25,11 +25,33 @@ class A () {
   }
 }
 class B extends A {
-  B(): super("Hello"){
+  B(): super("Hello"){      // Note: we added argument for constructor A, u define parameter "message"
     print("BYE");
   }
 }
 
 main(){
   var b = new B();
+}
+// ouput:   Hello
+            BYE
+
+
+
+// anither Ex
+
+class A{
+  A(p_message){
+  print("Message1 = $p_message");
+  }
+}
+class B extends A {
+  B(p_message): super(p_message){
+    print("Message2: $p_message");
+  }
+}
+class C extends B {
+  C(p_message): super(p_message){
+    print("Message3: $p_message");
+  }
 }
