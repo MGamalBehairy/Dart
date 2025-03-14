@@ -1,0 +1,32 @@
+You can NOT create an Object From "Abstract Class"
+
+Ex.
+
+abstract class A {
+  info(){
+    print("Hello");
+  }
+} 
+void main(){
+  var a = A();  // Error, you can't create an object from Abstract Class
+}
+
+
+ so How u create access the content of abstract class ?!!
+ By creating another class and inherit that class 
+
+
+ Ex.
+
+ abstract class A{
+   info(){
+     print("Hello);
+   }
+ }
+ class B extends A {
+   
+ }
+ main(){
+   var b = new B();
+   b.info();
+ }
