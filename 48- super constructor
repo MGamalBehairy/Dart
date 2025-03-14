@@ -1,0 +1,35 @@
+if u hinherit class from another class, it will also inherit the Constructor even when u do NOT create an object of the class that exeist the constructor
+
+Ex.
+
+class A{
+  A(){
+    print("Hello");
+  }
+}
+
+class B extends A {
+  
+}
+
+main(){
+  var b = new B();    // NOTE:  We here didn't create an object for class A, which contain the constructor,  instead created object for B which inherit class A,   and the constructor Executed !!
+}
+
+
+// another Ex
+
+class A () {
+  A(message) {
+    print("Message: $message");
+  }
+}
+class B extends A {
+  B(): super("Hello"){
+    print("BYE");
+  }
+}
+
+main(){
+  var b = new B();
+}
