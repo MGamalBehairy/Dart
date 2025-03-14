@@ -12,7 +12,7 @@ void main(){
 }
 
 
- so How u create access the content of abstract class ?!!
+ -------------- so How u can access the content of abstract class ?!! -----------
  By creating another class and inherit that class 
 
 
@@ -30,3 +30,83 @@ void main(){
    var b = new B();
    b.info();
  }
+
+
+
+
+---------------------------------  also there is an    abstract Method (function) ------------------
+abstract method is the method that its body is Empty (contain nothing)
+
+
+abstract class A {
+  info();      // abstract method    , the body is Empty
+}
+
+class B extends A {    // you will get an error, cuz class B will inherit abstract method which is forbiden
+  }
+}
+
+main() {
+  var b = B();
+  b.info();
+}
+
+
+// solution   is to override the abstract method  to the child class
+abstract class A {
+  info();
+}
+
+class B extends A {
+  @override
+  info(){
+    print("Hello, user");
+  }
+}
+
+main() {
+  var b = B();
+  b.info();
+}
+
+
+
+--------------------- interface --------------------
+interface is a way to inherit more than one class   (multi-inheritance),  so instead of using "extends" use "implements"
+// in the next example we want to inherit both of class A and B to class C,    so we have two ways to do that
+1- normal way ->> make class C inherit class B, and class B inherit class A  (but this solution requires two steps)
+2- one step  using "implements"     (but remember to use multi-inheritance, u need to override all methods from the inherited class (super class) to the child class)
+
+abstract class A {
+  info1();
+}
+class B{      // note: we didn't extend class A
+  info2(){
+    print("Hello");
+  }
+}
+
+class C implements B, A {}    // implements
+
+// u will get an error ,  cuz u used multi-inheritance and need to override all Methods & Variables that exist in class A and B
+class C implements B, A{
+  @override
+  info1(){
+    print("info from class A");
+  }
+  @override            // IMP.  we used override here too, even the "info2" is not abstract method.   cuz to use multi-inheritace,  u need to override ALL methods and Variables
+  info2(){
+    print("info from class B");
+  }
+}
+
+// Conclusions:
+- you can't create an object from abstract class ,    so u need to create another class and inherit this abstract class and u will be able to use object from the new class
+- abstract Methods is the Empty Method, which its body is Empty like this,  info();
+- and to use the abstract method, u should "override" it
+- u can only create abstract method in abstract class
+
+
+- interface = abstract class (can't create an object from this class)    NOT normal class
+- to use multi-inheritance, u need to override all methods from the inherited class (super class) to the child class
+- u need to "override" all methods even if the method is NOT abstract,  u need to override it too!    ( ALL Methods and Variables )
