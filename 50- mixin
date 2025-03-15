@@ -1,0 +1,89 @@
+
+mixin Swimming {
+  void swim() {
+    print("I can swim! 🏊‍♂️");
+  }
+}
+
+class Animal {
+  void eat() {
+    print("I can eat 🍽️");
+  }
+}
+
+// Using the mixin inside the class
+class Fish extends Animal with Swimming {}
+
+void main() {
+  var fish = Fish();
+  fish.eat();   // Output: I can eat 🍽️
+  fish.swim();  // Output: I can swim! 🏊‍♂️
+}
+
+
+
+---------------------------  Difference between "mixin" and "implements" ---------------------------------
+https://prnt.sc/IIuqyY5qJNDE
+
+
+mixin uses the methods without need to rewrite the method again manually like "implements"
+
+Ex. using mixin
+mixin Flying {
+  void fly() {
+    print("I can fly! 🦅");
+  }
+}
+
+mixin Swimming {
+  void swim() {
+    print("I can swim! 🏊‍♂️");
+  }
+}
+
+class Duck with Flying, Swimming {}  // ✅ Uses mixins
+
+void main() {
+  var duck = Duck();
+  duck.fly();  // Output: I can fly! 🦅
+  duck.swim(); // Output: I can swim! 🏊‍♂️
+}
+
+- Ex.  using "implements" (hard way)
+abstract class Flying {
+  void fly(){
+  print("I can fly");
+  }
+}
+
+class Swiming {
+  void swim(){
+    print("I can swim");
+  }
+}
+class Duck implements Flying, Swiming{      // Note: here u need to retype the methods again "override them"
+  @override
+  fly(){
+    print("I can fly");
+  }
+@override
+swim(){
+  print("I can swim");
+}
+}
+
+void main(){
+  var duck = Duck();
+  duc
+}
+
+
+- the difference between "mixin" and "implements"          "mixin"                        ,       "implements"
+                                                   =>>   NO   Constructors                ,    can contain constructors
+                                                   =>> uses existing methods as they are  , need to override and implement all methods manually
+                                                   =>> use to reuse functionality         , used to Define Constructors
+                                                   =>> u can insert abstract method in it , u need to insert "abstract" keyword to abstract methods and abstract class
+                                "withoud inserting "abstract" keyword   like this   info();"
+
+- use "extend" keyword with Classes,   while use "with" keyword with "mixin"
+
