@@ -1,0 +1,10 @@
+class A {}
+
+main(){
+  var a1 = A();      // a is object from class A
+
+  int x = 10;      // x is an object from class int
+
+  // Imp: when u type   a1.   u will find 4 functions (options) alsough the class is empty,  and this is because the class extend automatically the object class
+  // so when u type     class B{}    it will inherit automaticaly the Object class  =>>  " class B extends Object{} "
+}
