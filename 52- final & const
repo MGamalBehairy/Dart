@@ -1,0 +1,10 @@
+final and const  both of them  =>> can NOT change the value 
+also u have to set the value at the definition
+ex.
+
+main(){
+  final String a1;  // Error,  u need to set value
+  const String a2 = 'd';
+  a2 = 'f';  // Error, can NOT change the value
+}
+
