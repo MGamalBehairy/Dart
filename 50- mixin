@@ -1,13 +1,13 @@
 
 mixin Swimming {
   void swim() {
-    print("I can swim! 🏊‍♂️");
+    print("I can swim!");
   }
 }
 
 class Animal {
   void eat() {
-    print("I can eat 🍽️");
+    print("I can eat");
   }
 }
 
@@ -16,8 +16,8 @@ class Fish extends Animal with Swimming {}
 
 void main() {
   var fish = Fish();
-  fish.eat();   // Output: I can eat 🍽️
-  fish.swim();  // Output: I can swim! 🏊‍♂️
+  fish.eat();   // Output: I can eat
+  fish.swim();  // Output: I can swim!
 }
 
 
@@ -31,13 +31,13 @@ mixin uses the methods without need to rewrite the method again manually like "i
 Ex. using mixin
 mixin Flying {
   void fly() {
-    print("I can fly! 🦅");
+    print("I can fly!");
   }
 }
 
 mixin Swimming {
   void swim() {
-    print("I can swim! 🏊‍♂️");
+    print("I can swim!");
   }
 }
 
@@ -45,8 +45,8 @@ class Duck with Flying, Swimming {}  // ✅ Uses mixins
 
 void main() {
   var duck = Duck();
-  duck.fly();  // Output: I can fly! 🦅
-  duck.swim(); // Output: I can swim! 🏊‍♂️
+  duck.fly();  // Output: I can fly!
+  duck.swim(); // Output: I can swim!
 }
 
 - Ex.  using "implements" (hard way)
