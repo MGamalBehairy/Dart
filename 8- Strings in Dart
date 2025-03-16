@@ -7,7 +7,10 @@ Note:
 
 
 Very Important
- Raw String    
+                                         ---- Raw String ----
+
+print("Hello \t guys");   =>> hello       guys
+print(r"Hello \t guys"); =>> hello \t guys
  *Syntax
  String rawString = r"Hello\nWorld";  // Note: we added "r" before the string, the "r" is for => raw string
  *it used for:
