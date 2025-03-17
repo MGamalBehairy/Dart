@@ -16,7 +16,7 @@ var countryMap = {
 };
 
 
-//  USA ,   Egypt,  Emirates   are called  =>>    uniqe identifier    ,   and u can NOT repeat the Uniqe Identefier (if u  did, it will take just the first unqie identefier and ingore the other)
+//  USA ,   Egypt,  Emirates   are called  =>>    uniqe identifier (key)   ,   and u can NOT repeat the Uniqe Identefier (if u  did, it will take just the first unqie identefier and ingore the other)
 
 * Constructor    => First Add Emtpy Map, then add keys and values on it
   - it's used when you need to add Dynamic add key-value pairs like (reading INPUT  from users or files )
