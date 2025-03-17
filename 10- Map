@@ -15,6 +15,9 @@ var countryMap = {
 "Saudi Arabia" : "Riadh"
 };
 
+
+//  USA ,   Egypt,  Emirates   are called  =>>    uniqe identifier
+
 * Constructor    => First Add Emtpy Map, then add keys and values on it
   - it's used when you need to add Dynamic add key-value pairs like (reading INPUT  from users or files )
   Ex.
