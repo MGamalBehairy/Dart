@@ -83,3 +83,5 @@ void test() {
 
 
 ///   we use switch  when  we have limited options or choises "it will be better than if"
+like gender,   u have only 2 possible options   =>> male  or female
+or Grades ,   5 options   =>> A(Excellent), B, C, D, F(Fail)
