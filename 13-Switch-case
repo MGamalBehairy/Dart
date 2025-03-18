@@ -1,4 +1,7 @@
 switch-case is a simplified version of "if-else" 
+it compares with "value"  not "Condition" like if-else
+its simplified to  equal to " == "      ==>    is   expression qual to  value
+
 * Syntax
 
 switch (expression) {
