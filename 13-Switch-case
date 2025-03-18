@@ -80,3 +80,6 @@ void test() {
   }
   print("Code is Finished!");    // NOTE: we used here "break"   and this will just break and get out from "switch" but will execute the rest of the code
 }
+
+
+///   we use switch  when  we have limited options or choises "it will be better than if"
