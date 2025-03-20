@@ -1,0 +1,33 @@
+null safety=>> is very important and u will use it a lot to prevernt the null values
+
+any variable is   non-nullable  =>> can't hold null values,   and will cause an error 
+
+so if u want to make a variable to be nullable (change it from its default non-nullable to nullable)   use  "  ?  "  after data type
+
+int? number1;
+
+
+but note next example
+int? num1;
+int num2 = 15;
+int result = num1 * num2;        // Error =>>  u will see an error in the " * " operator,  cuz dart worries if num1 is null 
+                                 // so u must put it between if condition
+
+
+// Ex. avoid the Error in the operator
+int? num1;
+int num2 = 15;
+if(num1 != null) {
+  int result = num1 * num2;
+  print(result);
+}
+
+//  OR =>> another solution
+// use  "  !  "   =>> it likes u tell dart,  this variable will not be null,  (on your gurantee)
+int? num1;
+int num2 = 15;
+int result = num1! * num2;
+print(result);
+//   but if num1 was  null ,  it will give u an Exception (error)
+
+// Ex   if  u  want  to assign a variable( non-nullable) to null variable
