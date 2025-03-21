@@ -30,4 +30,46 @@ int result = num1! * num2;
 print(result);
 //   but if num1 was  null ,  it will give u an Exception (error)
 
-// Ex   if  u  want  to assign a variable( non-nullable) to null variable
+// Ex   if  u  want  to assign a variable ( non-nullable ) to null variable
+
+int? num1 ;
+
+int result;
+if( num1 != null) {
+  result = num1;
+}else {
+  result = 15;    // default value
+}
+
+
+// OR   , another simple solution
+
+int? num1;
+int result = num1 ?? 15;      //  ?? =>> if left variable " num1 " is null, then assign 15 "default value"  to "result"
+
+
+
+
+////  operations on null variable
+
+int? num1;
+print(num1.toDouble());    // Error: can't convert null to Double
+// solution
+// if u r sure that this null variable , will not be bull when convert it to double (it will take value)
+// u can use " ! "
+print(num1!.toDouble())  // so u tell dart, this variable will not be null,  and if it was null, it will throw an Error
+// OR   use  "   ?   "
+
+print( num1?.toDouble() )      // note we used here " ? "
+                              // it tells dart,  if the left variable was null, then do not execute the right operation
+// try this code
+
+void main(){
+  int? num1;
+  print(num1?.toDouble());    // output: null    =>>  ? see if the left variable (num1) is null, then it will not execute the right operation ( toDouble() )
+                                                                                              // so it will be like =>>   print(num1)   will ignore .toDouble()
+}
+
+//    -------------------    ?   -------------------------
+//  so we can use " ? "   to make variable   nullable
+// and use it in operations , if the variable was null, then ignore the right operation
