@@ -1,6 +1,8 @@
 The loops are 
-for loop    ,    for ... in loop    ,     for each loop    ,    while loop      ,       do-while loop
-
+for loop                       ,    for ... in loop             ,      for each loop           ,    while loop          ,       do-while loop
+exact number of loops         , iterate throw items of collection , same as for..in            ,   based on "condition" ,  when need to execute the loop at least one time     
+                                   but u don't have "index"       ,  ListName.forEach( () {} )
+                                                                 , the "List" datatype provide this forEach
 1-////   for   ////
  for(initialization; condition; text expression){
     // Body of the loop
