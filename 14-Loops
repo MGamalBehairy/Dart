@@ -22,7 +22,7 @@ Ex.
 void main()
 {
  var numbers = [1, 2, 3, 4, 5];
- for (i in numbers)
+ for (int i in numbers)          // we must declate the type of the variable "int i" ,  but in the forEach =>> we don't need to declare it, cuz it knows the type of the list, and take its datatype
  {
   print(i);
  }
@@ -32,7 +32,8 @@ void main()
 for each => itetrate over all elements in some container and passes the elements to some specific function
 
 * Syntax *
-collection.foreach( void f(value) )
+collection.forEach( (var element) {} )        // you can Not declare the datatype of element here, cuz it will look for the collection datatype and set it to element variable
+collection.forEach( void f(value) )
 // f(value) =>> it is used to make a call to the "f"  function for each element in the collection
 
 *Important*
@@ -65,7 +66,7 @@ void main()
 
 
 5-  ////  do..while  ///
-it must be executed at least one time, then the condition is tested
+it must be executed at least one time, then the condition is tested ,    note that we put semicolon after while();
 *Syntax*
 do {
  // body of loop
