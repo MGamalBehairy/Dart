@@ -1,0 +1,2 @@
+methods are functions but the difference is =>> methods exist in class , and the function is independent
+also the built-in functions that exist in collections (lists, Maps, ...)  called Methods not functions, cuz List, Maps are Classes 
