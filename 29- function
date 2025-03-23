@@ -38,8 +38,31 @@ fun4(int x, double y) {
   return x+y;
 }
 
+//////////////////////////////////////////   return   ///////////////////////////////////
+
+// if the function datatype was int, float, double, num =>>  then u need to return value,   and if  u didn't return anything, u will get an error
+
+note the next example
+
+int sumTwoNumbers(){
+  int num1 = 10;
+  int num2 = 20;
+  int result = num1 + num2;
+
+  return result;
+}
+void main(){
+  int sum = sumTwoNumbers();        // this line means =>> will execute the "sumTwoNumbers" function,   and the value from this function will be assigned to "sum" variable
+}
+
+
+
 Notce: 
 if the function is int, double, float  ->> you need to print it, if you just called it (even the function itself return number, it will not be shown, so you need to print it) as fun2 (earlier)
 Note: if function "return" something ->> You need to print it,  NOT just call it cuz it will not be shown 
   and if the function "print", you just need to call it.
   
+
+parameters are the variables , and arguments are the Values
+int sum(int num1, int num2){}  =>> num1 and num2 are parameters
+sum(10,30); 10 and 30 are arguments
