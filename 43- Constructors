@@ -1,6 +1,6 @@
-constructors is a Special function and get executed automaticallyonce u create an object, (u didn't call the function, once u create new object, the constructor get executed), and the constructor name  should be the same of the class name. 
+constructors is a Special Method and get executed automatically once u create an object, (u didn't call the function, once u create new object, the constructor get executed), and the constructor name  should be the same of the class name. 
 - so once u create an object, the constructors will be executed
-
+- constructor don't accept return type (int, String ...)
 Note the next 2 examples to see how constructors works.
 
 Ex1.class car {
@@ -15,7 +15,7 @@ Ex1.class car {
 }
 
 void main() {
-  car car1 = car();
+  car car1 = car();        //  Note: this line is so important, cuz u call the constructor,  and the constructor construct (build) the object ,   so if u just make it like this =>> car car1;   there is no object was created, so u have to call the constructor to create the object
   car1.model = "BMW";
   car1.speed = 250;
   car1.color = "Black";
