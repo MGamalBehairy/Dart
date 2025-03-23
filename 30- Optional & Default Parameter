@@ -1,3 +1,5 @@
+[]  =>> to make optional paramater,     the optional parameter mst come in the End
+the dafult value of parameter is just set to the optional parameter
 sum (x, [y]) {      // Note: [y] or {}  is between two brackets ->> it mean it's optional
   print("x: $x");
   print("y: $y")
