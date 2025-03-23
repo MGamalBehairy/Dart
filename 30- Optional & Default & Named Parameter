@@ -25,6 +25,12 @@ itn sum ( {int num1,int num2} )
 main(){
   sum( num1: 10 ,   num2 : 30);      // u have to set the name! not just givining the value, and this useful to avoid any misconfused of values  
 }
+
+///  and if u want to use  named parameter but without optional parameter (NOT optional),  =>> use " required " keyword
+Ex.
+double calculateFinalPrice( {required double price , double? discount} ) {  // we make the price required, but the discount optional 
+  double finalPrice = price! - price * discount! / 100;
+}
 ------------------------------
 
 without the [], you will get an error if you just pass 1 value to the two parameters as next Ex.
