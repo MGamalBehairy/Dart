@@ -11,6 +11,20 @@ void main()
   sum(3);    // passed here only one value
 }
 
+
+{} ===>>> used for optional parameters and " Named parameter" 
+named parameters means =>> to set value for a parameter u need to set first the name of the parameter
+
+Ex.
+
+itn sum ( {int num1,int num2} )
+{
+  int sum = num1 + num2;
+  return sum;
+}
+main(){
+  sum( num1: 10 ,   num2 : 30);      // u have to set the name! not just givining the value, and this useful to avoid any misconfused of values  
+}
 ------------------------------
 
 without the [], you will get an error if you just pass 1 value to the two parameters as next Ex.
