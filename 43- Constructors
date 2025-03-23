@@ -1,6 +1,7 @@
 constructors is a Special Method and get executed automatically once u create an object, (u didn't call the function, once u create new object, the constructor get executed), and the constructor name  should be the same of the class name. 
 - so once u create an object, the constructors will be executed
 - constructor don't accept return type (int, String ...)
+- constructor exist by default in the class body even u didn't type it, but empty 
 Note the next 2 examples to see how constructors works.
 
 Ex1.class car {
