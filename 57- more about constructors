@@ -1,0 +1,19 @@
+class Human{
+  double? height;
+  double? weight;
+  String? hairColor;
+/*
+  Human(double? height, double? weight, String hairColor){
+    this.height = height;
+    this.weight = weight;
+    this.hairColor = hairColor;
+  }
+*/
+
+  // alternative way,  more easy  (instead to create variable, then assign this variable to the attribute =>>> make the attribute as a paramater and make it accept the value)
+
+  Human(this.height, this.weight, this.hairColor);
+
+  // Note: u can just make like this in constructor, but can't define method ir function like this way
+  // int fun();  // Error, u can just make like this in constructors
+}
