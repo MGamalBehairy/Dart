@@ -1,0 +1,27 @@
+setter =>> is a simple way to set value to private attribute instead of function, use "set" and then set the attribute value like variable
+
+
+in the last lesson, we learned to set value to private attribute, we must create a method then set the value to the attribute in this method, like this
+
+// in human.dart file
+void setNumberOfArms(int numberOfArms) {
+  this._numberOfArms = numberOfArms;
+}
+// in main.dart file
+main(){
+  Human ob = Human();
+  ob.setNumberOfArms(1);
+}
+
+// now we can set value to private "Encapsulated" attribute in better way
+
+set numberOfArms(int numberOfArms){        //   as u can see, its the same exactly with the setNumberOfArms, but replaced "void" with "set"  this the only change we made 
+  this._numberOfArms = numberOfArms;
+}
+
+// and when u use this in main, u set value like normal variable, not function
+// in main.dart file
+main(){
+  Human ob = Human();
+  ob.numberOfArms = 1;      // set the value like normal variable (attribute)
+}
