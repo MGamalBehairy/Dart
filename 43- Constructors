@@ -46,3 +46,48 @@ void main() {
   // Note: Even we didn't call the function,  the function get executed. 
 }
 
+------------------------------------------------------------------------------------------------------------
+
+// we use constructor to set default value for object,  instead to give each object value,    set  paramaters in constructor and ebcome more easy
+//  next example without using construcotr
+class Human{
+  int? age;
+  String? hairColor;
+  String skinColor;
+  int? height;
+  int? weight;
+}
+
+void main(){
+  Human behery = Human();    // this default Empty constructor to create the object
+  behery.height = 190;
+  behery.hairColor = "black";
+  behery.weight = 80;
+
+  // create another object,   and we will need to define all atributes again like behery
+  Human ahmed = Human();
+  ahmed.hairColor = "yellow";
+  ahmed.age = 25;
+  ahmed.skinColor = "white";
+}
+
+// another solution using constrctor
+
+class Human {
+  int? age;
+  String? hairColor;
+  String? skinColor;
+  int? height;
+
+  Human(int? age, String? hairColor, String? skinColor, int? height){
+    this.age = age;        //  u say  the attribute of the object   equal to the value coming from the paramter
+    this.hairColor = hairColor;
+    this.skingColor = skinColor;
+    this.height = height;
+  }
+}
+main (){
+  Human behery = Human(18, 'black', 'white', '190');
+  Human ahmed = Human(25, 'yellow', 'brown', '180');
+  Human mohamed = Human(23, 'orange', 'white', '170');
+} // as u can see, its much easier
