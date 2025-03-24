@@ -1,0 +1,12 @@
+use arrow function "  =>  " when u have only "one" statement in the method or function
+we use arrow function just to simplify the code
+- another thing,  in arrow function we don't use "return" keyword, cuz we know we use it only with one statement, so its logic to return just onething, so we don't need to use "return"
+
+// normal way
+int getNumberOfArms(){
+  return numberOfArms;
+}
+
+// using arrow function
+int numberOfArms(numOfArms) => return numOfArms;  // Error: Do NOT use "return" 
+int numberOfArms(numOfArms) => numOfArms;
