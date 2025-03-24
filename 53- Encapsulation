@@ -1,0 +1,32 @@
+Encapsulation  =>> is a way to control the comnig input to variable or attribute by inserting " _ " before the variable (attribute) name
+The " _ " make the attribute =>> Private
+and when attribute become private =>> then no one can access this private attribute outside the file (where the atribute defined)
+
+
+///  so what should u do if u want to access this attribute ??!
+u need to make a function inside the file where u defined the class or attribute, then do whatever u do
+and the difference here, u have a function, so u can control the coming value, not just accept it
+// here is Ex.
+
+// 1- create new file for ex "human.dart"
+class Human{
+  int _numberOfArms = 2;
+}
+void setNumberOfArms (int numberOfArms) {
+  if(numberOfArms <= 2 && numberOfArms >= 0){
+    this._numberOfArms = numberOfArms;                  // note here u not just accept the value, but first checked if the number of arms less than 2, so u controled the value coming to this private attribute
+  }
+}
+int getNumberOfArms(){      // and this function  to  print the value of the private attribute,  remember u can access the function but can't access the private attibute outside the file
+  return _numberOfArms;
+}
+
+//// now go to the main.dart file
+main(){
+  Human mohamedObject = Human();
+  mohamedObject.setNumberOfArms(1);
+  mohamedObject.getNumberOfArms();    // output:  1   // the value of numberOfArms changes from 2 to 1
+  // but if u tried to make the numberOfArms more than 2 or less than 0, the attribute will ignore it
+  mohamedObject.setNumberOfArms(10);
+  mohamedObject.getNumberOfArms();    // output: 1 // the value will remain 1 and ignore 10
+}
