@@ -1,0 +1,8 @@
+- setter and getter are similar but with two diiferences
+getter is differnet with setter
+setter we don't define "datatype",  but in getter we get value, so we need to define the "datatype"
+- also getter doesn't accept any parameters
+- then we put "set" or "get" , then we make the setter or getter name same as with the attribute
+
+// Ex.
+int get numberOfArms => this._numberOfArms      // remember the name of setter or getter must be (highly recommended) same with the Private Attribute
