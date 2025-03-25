@@ -1,4 +1,22 @@
 //to make a child constructor accept parameter of super attribute
+// like this
+class Animal{
+  int numberOfLimbs = 4;
+  String? skinColor;
+  double? weight;
+
+  eat(){}
+}
+class Lion extends Animal {
+  Lion(numberOfLimbs, skinColor, weight);    // Error: these attributes are not defined
+                                              // these attributes are extended in the child class but not to the constructor
+                                              // to extend or use it in the child constructor =>>
+                                              //  u  need to set them in the parent or super class constructor, then u can use them in the child constructor
+}
+
+
+
+///  solution
 
 class Animal{
   int numberOfLimbs = 4;
@@ -6,7 +24,42 @@ class Animal{
   double? weight;
 
   eat(){}
-  walk(){}
-
+  Animal(this.numberOfLimbs, this.skinColor, this.weight);      // note u used the attributes in the constructor,  so if  u  extend this class to any other class,  u need to create constructor same as this
+    //  for ex, if the parent constructor has  3  parameters, then also every child should have 3 parameters also. 
+}
+class Lion extends Animal{
+  roar(){print("lion roaring);}
+  Lion(super.numberOfLimbs, super. skinColor, super.weight);  // Note: u used here "super" keyword NOT "this"  cuz u use attributes that exist in the super (parent) class
+}
+class Cat extends Animal{
+  String? bloodType;
+  meo(){
+    print("cat meoing");
+  }
+  Cat(required this.bloodType, super.numberOfLimbs, super. skinColor, super.weight);
 }
 
+
+////// Another Solution ////////////
+
+class Animal{
+  int numberOfLimbs = 4;
+  String? skinColor;
+  double? weight;
+
+  eat(){}
+  Animal(this.skinColor, this.weight);      
+}
+
+class Lion {
+  Lion (String skinColor, double weight)  : super ();  // when u use String skinColor, double weight,   they are new variables are differnet than attributes, so u need to use " : super() "
+  // " : super() " =>>> its like u use (copy and paste) the parent class 
+}
+
+
+
+
+and simple solution to  create the constructir,  just hover on the class name, and press "ctrl + . (dot) "
+
+// remember: if the parent class have constructor with parameter,  then all childs should have same shape of the parent constructor 
+// if the parent constructor have 3 parameters, then also all childs should have 3 parameters
