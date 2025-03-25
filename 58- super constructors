@@ -1,3 +1,5 @@
+//to make a child constructor accept parameter of super attribute
+
 class Animal{
   int numberOfLimbs = 4;
   String? skinColor;
@@ -5,4 +7,6 @@ class Animal{
 
   eat(){}
   walk(){}
+
 }
+
