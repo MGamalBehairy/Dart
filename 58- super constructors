@@ -1,0 +1,8 @@
+class Animal{
+  int numberOfLimbs = 4;
+  String? skinColor;
+  double? weight;
+
+  eat(){}
+  walk(){}
+}
