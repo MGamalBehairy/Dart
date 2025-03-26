@@ -40,7 +40,7 @@ class Cat extends Animal{
 }
 
 
-////// Another Solution ////////////
+////// Another Solution or another Way ////////////
 
 class Animal{
   int numberOfLimbs = 4;
@@ -48,12 +48,15 @@ class Animal{
   double? weight;
 
   eat(){}
-  Animal(this.skinColor, this.weight);      
+  Animal({this.skinColor, this.weight});      
 }
 
 class Lion {
   Lion (String skinColor, double weight)  : super ();  // when u use String skinColor, double weight,   they are new variables are differnet than attributes, so u need to use " : super() "
-  // " : super() " =>>> its like u use (copy and paste) the parent class 
+  // " : super() " =>>> its like u use (copy and paste) the parent class , so it will be like this
+
+  Lion (String skinColor, double weight) : super (skinColor: skinColor , weight:weight); // weight: weight  =>>> first one for parent attribte and second one variable (parameter) of Lion class
+
 }
 
 
@@ -63,3 +66,4 @@ and simple solution to  create the constructir,  just hover on the class name, a
 
 // remember: if the parent class have constructor with parameter,  then all childs should have same shape of the parent constructor 
 // if the parent constructor have 3 parameters, then also all childs should have 3 parameters
+class class_name : super();    // u use the actual parent constructor 
