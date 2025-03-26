@@ -66,32 +66,3 @@ main(){
 }
 
 
-
-///////////////////////////   Override    ///////////////////////////////////
-
-if we have two classes, and both of them have function and for example print something,    so we can create only one function and then reuse this function again and modify it "change the statement for example"
-
-class A{
-  info(){
-    print("Hello From A");
-  }
-}
-class B{
-  info2(){    // this new function  "info2", not the same with "info"
-    print("Hello From B");
-  }
-} 
-
-//  use Override
-
-
-class A{
-  info(){
-    print("Hello From A");
-  }
-}
-class B{
-  info(){    // NOTE: we used here the same function of A "info" !    ,,  so we didn't create new function, just used the function of class A, and modify on it
-    print("Hello From B");
-  }
-} 
