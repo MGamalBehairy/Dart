@@ -16,8 +16,10 @@ class Animal {
 
 class Lion implements Animal{    // implements Animal class 
   @override
-  String color = "Black";    // note: even the attribute you need to override it
-  @override
+  String? color;    // note: even the attribute you need to override it, but important thing =>> if u defined the attribute in the parent class with value, then when u override it , u have to give it value, and if u make it nullable in parent class, u need to make it nullable in child class 
+                    // so the attribute should be the same shape as the parent  
+  // String color = "black";  // you will get an error, cuz in the parent class, u make "color" nullable , but here u gaved it value, and that will be an Error
+@override
   eat(){
     print("lion is eating");
   }
