@@ -5,3 +5,29 @@ and u can't apply it without inheritance
 
 polymorphism is about u store things with different types
 if u have class Animal and inherit
+
+
+Ex.
+class Animal {
+  sleep() {}
+  walk() {}
+}
+
+class Lion extends Animal {
+  roar() {
+    print("roaring");
+  }
+}
+
+class Kitty extends Animal {}
+
+class Zebra {}
+
+main() {
+  print("Before object creation");
+  Zebra zebra = Zebra();
+  Kitty cat = Kitty();
+  Lion lion = Lion();
+
+  List<Animal> animalsZoo = [lion, cat];    // note that lion and cat are different types, but they inherit same parent, and try to add zebra to the list, you will get an error, cuz Zebra class doesn't inherit Animal
+}
