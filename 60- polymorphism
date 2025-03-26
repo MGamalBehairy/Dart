@@ -30,4 +30,7 @@ main() {
   Lion lion = Lion();
 
   List<Animal> animalsZoo = [lion, cat];    // note that lion and cat are different types, but they inherit same parent, and try to add zebra to the list, you will get an error, cuz Zebra class doesn't inherit Animal
+  // List<Animal> animalsZoo = [lion, cat, zebra];
+  // but if u didn't specify the type of the List (which here is Animal)  then it will accept "zebra"
+  // List animalsZoo = [lion, cat, zebra];  // but will be wrong usage, cuz animalsZoo List can store now anything! and this is wrong 
 }
