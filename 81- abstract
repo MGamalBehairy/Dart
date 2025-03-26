@@ -1,0 +1,37 @@
+abstract class =>> is a way to make sure if u want to ovveride method, u will not forget to override it  to all inherited classes (child class)
+
+for example we have animal class and =>> Lion, Zerba, Dog classes inherit from Animal class,   
+and Animal class has eat() method,  but the issue here,  lion, zebra and dog eat in different ways,  so we need to override this eat() method   and force the user or programmer to override this method until he not forget
+so the solution to force the programer to override it , is using abstract class
+
+// Normal way
+class Animal {
+  eat(){};
+}
+
+class Lion extends Animal{
+  @override
+  eat(){
+    print("lion eating");
+  }
+}
+class Cat{
+  @override
+  eat(){
+    print("cat is eating");
+  }
+}
+
+// as u noticed here we override the method here manually and we can't forget to override this method in some class
+// so to be make sure u override this method in all classes, u need to use  "abstract"
+
+// solution
+abstract class Animal{
+  // then make the method that u want to override it , as the next shape =>>>    method();      // this optonal step, u ca
+  eat();          //// IMP.  u don't need to insert cerly prackets {} ,    and u can just do this in the abstract class   and   in the constructor    , just these two things are special that u can not use {}
+  // cuz this method will be overrided and if u add anything in this method , it will be totaly get ignored 
+}
+class Lion extends Animal{
+  @override
+  eat(){}        // and if u didn't override "eat()" method ,   u will get an error,  so now u are forced to add this method
+}
