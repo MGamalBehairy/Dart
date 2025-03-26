@@ -35,3 +35,5 @@ class Lion extends Animal{
   @override
   eat(){}        // and if u didn't override "eat()" method ,   u will get an error,  so now u are forced to add this method
 }
+
+//  another important noctice: you can NOT create object from abstract classes, and it make sense, cuz abstract classes inherit another classes, so u don't need to create object to this abstract class
