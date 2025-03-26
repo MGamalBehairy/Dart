@@ -1,0 +1,28 @@
+implements is like abstract,  but in abstract we define the method we need to override (maybe only one, we not need to override all methods) 
+
+but in implements =>> it override all methods! and redefine all methods and Attributes !!
+
+so implements differnet with abstract, that implements need to override every method and also "attribute"
+
+Ex.
+
+class Animal {
+  String? color;
+  eat();
+  run(){
+    print("The animal is running");
+  }
+}
+
+class Lion implements Animal{    // implements Animal class 
+  @override
+  String color = "Black";    // note: even the attribute you need to override it
+  @override
+  eat(){
+    print("lion is eating");
+  }
+  @override
+  run(){
+    print("lion is running");
+  }
+}
