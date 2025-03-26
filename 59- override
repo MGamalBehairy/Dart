@@ -1,0 +1,29 @@
+
+///////////////////////////   Override    ///////////////////////////////////
+
+if we have two classes, and both of them have function (method) and doing something for example print something, so we can create only one method and then reuse this method again and modify it "change the statement for example"
+so we use override, when need to change the behavior or the implementation of method
+class A{
+  info(){
+    print("Hello From A");
+  }
+}
+class B{
+  info2(){    // this new function  "info2", not the same with "info"
+    print("Hello From B");
+  }
+} 
+
+//  use Override
+
+
+class A{
+  info(){
+    print("Hello From A");
+  }
+}
+class B{
+  info(){    // NOTE: we used here the same function of A "info" !    ,,  so we didn't create new function, just used the function of class A, and modify on it
+    print("Hello From B");
+  }
+} 
