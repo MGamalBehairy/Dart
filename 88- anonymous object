@@ -1,0 +1,12 @@
+anonymous object =>>  is object but without name  becuase u don't need the name or to access this object, just need the content of this object, like anonymous user in facebook, we need to know the content of the post not the name of the user
+
+class Animal{
+  String color;
+  Animal(this.color);
+}
+void main(){
+  Animal Dog = Animal("Black");
+          // note: this Part Animal("Black") is the responsible to create the object
+  
+  Animal("Yellow"); // u create object but without name!  and that's called  "anonymous object"     
+}
