@@ -1,0 +1,40 @@
+the class can contain more than one Constructor!!
+u can have many constructors for different prupose
+
+for example if u want to create circle,  so u need to know the x-axis  and y-axis  and radius
+, but what if the cricle was at the origin, so u don't have to set the x and y axis with 0  cuz its already known
+
+// circle with x and y axis
+class Circle {
+  int? x;
+  int? y;
+  double? radius;
+
+  Circle({this.x, this.y, this.radius});
+
+  // named Constructor
+  Circle.origin({this.radius}) {
+    x = 0;
+    y = 0;
+  }
+
+  void draw() {
+    print('draw this circle at radius = $radius and center {$x,$y}');
+  }
+}
+
+// but if u know, the center was at the origin, so u don't need to get the value of x and y (cuz it is 0)
+
+// this how u make  " named constructor "
+
+main() {
+  Circle circle1 = Circle(radius: 8.5, x: 4, y: 6);
+
+  // and to call named constructor, as next
+  Circle circle2 = Circle.origin(
+      radius:
+          8.5); // first Circle is the class name and second one is the Constructor name
+
+  circle1.draw();
+  circle2.draw();
+}
