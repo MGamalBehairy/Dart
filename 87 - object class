@@ -1,0 +1,10 @@
+class Dog {
+  
+}
+void main(){
+  Dog jack = Dog();
+  // when u type jack.     u will see many methods u can u use but u didn't create it,  so where these methods come from ?!!
+                                                                                    // the ansert is from "object class" , cuz when u create class it extends (inherit) by default the object class
+}
+
+// so when u type this      class Cat{}        it is the same as this       class Cat extends Object{}
