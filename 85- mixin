@@ -1,0 +1,39 @@
+mixin =>> is alternative way to support  multiple-inhertiance
+mixin is the same as class  =>>  hold attributes and methods
+
+so if u want to make class inherit more than one class,  u can make the other class make it mixin
+just replace class with =>> mixin
+
+class Animal {
+  
+}
+mixin MammalsMixin {    // the name MammalsMixin  just to know it is mixin not class
+  walk(){
+    print("Mammals walking");
+  }
+}
+mixin ReptilesMixin {
+  crawl(){}
+}
+mixin PetMixin {
+  play(){}
+  walk(){    // note we added here walk() method again like MammalsMixin,    now 
+    print("pet walking");
+  }
+}
+
+class Dog extends Animal with MammalsMixin , PetMixin {   // u inherit more that one class because of "mixin"     and note we use "with" keyword  alternative to  extends  and if u want to inherit more that one mixin  just use " , "
+}
+class Snake extends Animal with ReptilesMixin {      
+}
+
+
+void main(){
+  Dog jack = Dog();
+  jack.walk();        // note that walk() method exist in both PetMixin and MammalsMixin ,   but the last mixin u inherited that one will be executed 
+              // output :  "pet walking"   =>> cuz PetMixin was the last mixin  inherited
+}
+
+conclusion  =>>
+class      ===  mixin
+extends    ===  with          more that one mixin  use " , "    and   if u inheritied more than one mixin  and inside them  same method,      the last  mixin u inherited will be executed
