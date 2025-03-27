@@ -1,0 +1,42 @@
+when exception occured, the app will crash 
+so we need to handle with this exceptions
+
+* Syntax with Exceptions *
+try{} catch(e) {}                            /// this called   try-catch block      and "e" shortcut for exceptions
+
+
+try{
+  // try this code (execute this code)
+  // if no exceptions happened, then it will be fine and ignore the "catch" block
+
+  but if exceptions occured, then throw this exceptions to the "e" variable  (so now "e" store the data of this exception)
+  // and then   ignore the "try" block and execute the "catch" block
+}
+catch(){
+  
+}
+
+
+
+if u know or want to be specific of type of exception, u can use it 
+
+try{}                                                                                                                                                            , like    if {}
+on RangeError {}            // RangeError: is a type of exceptions,    so if the exception was from RangeError, then the code within this block will be executed,     and  this like else-if
+on HttpException{}
+catch (e){}                 //  and also u can use catch(){}      its like the default  block,    if the exception type was non of the above exception types u determined, then the catch block will be executed ,    so  catch(){}   is like  else{}
+
+
+
+
+
+void main()
+{
+List colors = ['black'];
+
+  try{
+    print(colors[5]);    
+  }
+  catch(e) {
+    print(e);    // print e  to see the exception message (or to tell the user about the problem)
+  }
+}
