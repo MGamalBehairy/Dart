@@ -1,0 +1,34 @@
+enum =>> used to store spefic limited options (value) 
+used when u have known limited choices (u can count the choices)
+like,   gender =>> male OR female
+        months =>> Jan, Feb, March ....     u can count them
+
+enum is like container =>> u put inside it the possible options and then create variable of type enum that hold the value of enum (one of enum options)
+
+Ex.
+
+enum Gender {        // create enum and options of it
+  male , female
+}
+
+void main(){
+  enum gender = Gender.male;    // create variable of type enum      , as this way there is no mistake can happened of mistyping 
+  
+}
+
+// the best use of enum is with switch-case ,  but when use switch-case,  u must add all possible cases (options that exist in th enum)
+
+Ex.
+
+enum Gender {
+  male , female
+}
+void main(){
+  Gender gender = Gender.male;
+  switch(gender){
+    case Gender.male;
+      break;
+    case Gender.female;    // if u didn't add this case, u will get an error,   bucase u need to add all options
+      break;
+  }
+}
