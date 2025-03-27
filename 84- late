@@ -1,0 +1,19 @@
+if u r sure that u will give the variable or attribute a value,   and don't want to make it nullable =>> then "late" is the best choice for it
+as previous example
+
+class Circle {
+  int? x;  // if u tried to make it like this =>> int x; u will get an error
+  int? y;
+  double? radius;
+  Circle.origin({this.x, this.y, this.radius})
+}
+main(){
+  Circle circle1 = Circle.origin(x: null  ,  y:1 , radius:4);  // as u can see, se passed "null" to x   ,   and we don't want this for sure ,  but also if u didn't make x nullable, then u will get an error
+                                                                // so the solution is to make the attribute "late"
+}
+class Circle2 {
+  late int x;        // now, u tell dart u r sure and its on ur gurantee that x will have value later
+  late int y;
+  double? radius;
+  Circle2.origin({this.x, this.y, this.radius})
+}
